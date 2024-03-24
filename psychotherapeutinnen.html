@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tests | Tabelle</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+    <div>
+        <h1>Therapieangebot in Tübingen</h1>
+    </div>
+    <div>
+        <h3>Filter:</h3>
+    </div>
+    <br>
+    <form>
+        <div class="Geschlecht">
+            <div>
+                <strong>Geschlecht:</strong>
+            </div>
+            <input type="checkbox" value="m">Männlich<br>
+            <input type="checkbox" value="w">Weiblich<br>
+        </div>
+        <br>
+        <div class="Kasse">
+        <div>
+                <strong>Kasse:</strong>
+            </div>
+            <input type="checkbox" value="g">Gesetzliche Krankenkasse<br>
+            <input type="checkbox" value="p">Privatversicherung<br>
+        </div>
+        <br>
+        <div>
+            <strong>Stadtteile:</strong> <!-- Muss noch gescriptet werden-->
+        </div>
+            <input type="checkbox" value="zentrum">Zentrum<br>
+            <input type="checkbox" value="lustnau">Lustnau<br>
+        </div>
+        <br>
+        <div>
+            <strong>Therapieformen:</strong> <!-- Muss noch gescriptet werden-->
+        </div>
+            <input type="checkbox" value="verhalten">Verhaltenstherapie<br>
+            <input type="checkbox" value="tiefe">Tiefenpsychologisches Verfahren<br>
+        </div>
+        <br>
+        <div>
+            <span><strong>Adresse: </strong></span><input type="text" value=""> 
+        </div>
+        <br>
+        <button type="submit">Fertig    </button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <div id="table-container"></div>
+    <script src="therapieliste.js"></script>
+</body>
+</html>
