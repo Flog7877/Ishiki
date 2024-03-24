@@ -160,11 +160,20 @@ function routenGenerator(beg, end) {
 
 function webTest(str) {
     if (str === '') {
-        return 'Nicht vorhanden';
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-x"><path d="m13.5 8.5-5 5"/><path d="m8.5 8.5 5 5"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>';
     }
 
     return `<a href="${str}" target="_blank">Website</a>`;
 
+}
+
+function istTherapieform(arr, therapieform) {
+    for (let therapieEintrag of arr) {
+        if(therapieEintrag === therapieform) {
+            return true;
+        }
+    }
+    return false;
 }
 
 
@@ -259,9 +268,58 @@ formTest.addEventListener('submit', (e) => {
         gefilterteListeKasse = gefilterteListeKasse.concat(gesetzl);
     }
 
-    console.log(gefilterteListeKasse);
+    // console.log(gefilterteListeKasse);
 
-    let listeFILTERED = gefilterteListeKasse;
+    // Stadtteile:
+
+    let gefilterteListeStadt = [];
+
+    if (werte.zentrum === true) {
+        let teil = gefilterteListeKasse.filter(obj => {
+            if (obj.stadtteil === 'Zentrum') {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeStadt = gefilterteListeStadt.concat(teil);
+    }
+
+    console.log(gefilterteListeStadt);
+
+    // Therapieformen:
+
+    let gefilterteListeForm = [];
+
+    if (werte.verhalten === true) {
+        let thrForm1 = gefilterteListeStadt.filter(obj => {
+            if (istTherapieform(obj.therapieformen, 'Verhaltenstherapie') === true) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+         gefilterteListeForm = gefilterteListeForm.concat(thrForm1);
+    }
+
+    if (werte.tiefe === true) {
+        let thrForm2 = gefilterteListeStadt.filter(obj => {
+            if (istTherapieform(obj.therapieformen, 'Tiefenpsychologisches Verfahren') === true) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+         gefilterteListeForm = gefilterteListeForm.concat(thrForm2);
+    }
+
+
+    //// HIER ENDE FILTERN
+
+    let listeFILTERED = gefilterteListeForm;
 
     //// Adressfeld
 
@@ -279,11 +337,11 @@ formTest.addEventListener('submit', (e) => {
 
         let table = '<table>';
 
-        table += '<tr><th>Name</th><th>Telefonnummer</th><th>Tel. Erreichbarkeit</th><th>Adresse</th><th>Website</th></tr>';
+        table += '<tr><th>Name</th><th>Telefonnummer</th><th>Tel. Erreichbarkeit</th><th>Therapieform</th><th>Adresse</th><th>Website</th></tr>';
 
         datensatz.forEach(objekt =>{
             //table += '<tr><td>'+ objekt.therapeutenname + '</td><td>' + objekt.telefonnummer + '</td><td>' + objekt.erreichbarkeit + '</td><td>' + objekt.adresse + '</td><td><a href="'+ objekt.website + '" target="_blank">Website</a></td></tr>';
-            table += `<tr><td>${objekt.therapeutenname}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${objekt.adresse}<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
+            table += `<tr><td>${objekt.therapeutenname}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
         });
 
         table += '</table>';
@@ -297,4 +355,7 @@ formTest.addEventListener('submit', (e) => {
 }) 
 
 
-// Therapieformen hinzufügen#!!1
+/* 
+Seite für jedeN TherapeutIn anlegen, link basteln in dem Tabellengenerator.
+Auf der Seite für jeden Therapeuten die Adresse mit openstreetmaps einbinden!!
+*/
