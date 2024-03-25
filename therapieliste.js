@@ -4,6 +4,7 @@ let liste = [
 
     {
         "therapeutenname": "Alexandra Haux",
+        "seite": "alexandra_haux",
         "telefonnummer": "0152 01307666",
         "erreichbarkeit": [
             "Montag: 9-17 Uhr", "Donnerstag: 11-17 Uhr", "Freitag: 9-15 Uhr" // Jeweils zur vollen Stunde...
@@ -20,6 +21,7 @@ let liste = [
     },
     {
         "therapeutenname": "Sabrina Schenk",
+        "seite": "sabrina_schenk",
         "telefonnummer": "07071 7772559",
         "erreichbarkeit": [
             ab
@@ -36,6 +38,7 @@ let liste = [
     },
     {
         "therapeutenname": "Anne Koop",
+        "seite": "anne_koop",
         "telefonnummer": "01590 4973214",
         "erreichbarkeit": [
             ab 
@@ -52,6 +55,7 @@ let liste = [
     },
     {
         "therapeutenname": "Meks Mattes",
+        "seite": "meks_mattes",
         "telefonnummer": "07071 52011",
         "erreichbarkeit": [
             "Montag: 12:50-13:20 Uhr", "Mittwoch: 12:50-13:20 Uhr", ab 
@@ -68,6 +72,7 @@ let liste = [
     },
     {
         "therapeutenname": "Maria-Elisabeth Hardt-Svaldi",
+        "seite": "maria_elisabeth_hardt_svaldi",
         "telefonnummer": "0162 4600812",
         "erreichbarkeit": [
             ab
@@ -84,6 +89,7 @@ let liste = [
     },
     {
         "therapeutenname": "Manfred Kooistra",
+        "seite": "manfred_kooistra",
         "telefonnummer": "07071 9692992",
         "erreichbarkeit": [
             "Montag: 13-14 Uhr", "Donnerstag: 13-14 Uhr"
@@ -174,6 +180,10 @@ function istTherapieform(arr, therapieform) {
         }
     }
     return false;
+}
+
+function linkName(seite, therapeutenName) {
+    return `<a href="TherapeutInnen/${seite}.html">${therapeutenName}</a>`;
 }
 
 
@@ -341,7 +351,8 @@ formTest.addEventListener('submit', (e) => {
 
         datensatz.forEach(objekt =>{
             //table += '<tr><td>'+ objekt.therapeutenname + '</td><td>' + objekt.telefonnummer + '</td><td>' + objekt.erreichbarkeit + '</td><td>' + objekt.adresse + '</td><td><a href="'+ objekt.website + '" target="_blank">Website</a></td></tr>';
-            table += `<tr><td>${objekt.therapeutenname}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
+            //table += `<tr><td>${objekt.therapeutenname}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
+            table += `<tr><td>${linkName(objekt.seite, objekt.therapeutenname)}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
         });
 
         table += '</table>';
