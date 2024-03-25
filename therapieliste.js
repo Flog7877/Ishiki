@@ -183,9 +183,12 @@ function istTherapieform(arr, therapieform) {
 }
 
 function linkName(seite, therapeutenName) {
-    return `<a href="TherapeutInnen/${seite}.html">${therapeutenName}</a>`;
+    return `<a href="TherapeutInnen/${seite}.html" target="_blank">${therapeutenName}</a>`;
 }
 
+function nameInfo() {
+    return '<span class="popup" onclick="togglePopup2()"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="popuptext" id="nameInfo">Mehr Informationen zu einzelnen Therapeut*innen sind auf deren jeweiligen Seiten zu finden! Dazu einfach auf den Namen drücken.</span></span>'
+}
 
 console.log(liste);
 
@@ -347,7 +350,7 @@ formTest.addEventListener('submit', (e) => {
 
         let table = '<table>';
 
-        table += '<tr><th>Name</th><th>Telefonnummer</th><th>Tel. Erreichbarkeit</th><th>Therapieform</th><th>Adresse</th><th>Website</th></tr>';
+        table += `<tr><th>Name ${nameInfo()}</th><th>Telefonnummer</th><th>Tel. Erreichbarkeit</th><th>Therapieform</th><th>Adresse</th><th>Website</th></tr>`;
 
         datensatz.forEach(objekt =>{
             //table += '<tr><td>'+ objekt.therapeutenname + '</td><td>' + objekt.telefonnummer + '</td><td>' + objekt.erreichbarkeit + '</td><td>' + objekt.adresse + '</td><td><a href="'+ objekt.website + '" target="_blank">Website</a></td></tr>';
@@ -375,5 +378,10 @@ Auf der Seite für jeden Therapeuten die Adresse mit openstreetmaps einbinden!!
 
 function togglePopup() {
     let popup = document.getElementById("popups");
+    popup.classList.toggle("show");
+}
+
+function togglePopup2() {
+    let popup = document.getElementById("nameInfo");
     popup.classList.toggle("show");
 }
