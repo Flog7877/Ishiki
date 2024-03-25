@@ -59,3 +59,27 @@ body {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+
+  .Therapeutentabelle th, td {
+    border: 1px solid;     
+  }
+
+  table {
+    border-collapse: collapse;
+    padding: 5%;
+    border: hidden;
+  }
+
+th, td {
+  padding: 10px;
+}
+
+.Therapeutentabelle br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: 10px; /* change this to whatever height you want it */
+}
+
+/*
+Bei aufspalten() das letze Element entfernen, so dass kein <br> hinzugefügt wird
+*/

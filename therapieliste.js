@@ -348,7 +348,7 @@ formTest.addEventListener('submit', (e) => {
 
     function tabelleErstellen(datensatz) {
 
-        let table = '<table>';
+        let table = '<table class="Therapeutentabelle">';
 
         table += `<tr><th>Name ${nameInfo()}</th><th>Telefonnummer</th><th>Tel. Erreichbarkeit</th><th>Therapieform</th><th>Adresse</th><th>Website</th></tr>`;
 
