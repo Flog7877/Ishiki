@@ -63,7 +63,7 @@ let liste = [
         "stadtteil": "Zentrum",
         "website": "https://meksmattes.de/index.php",
         "geschlecht": "w",
-        "kasse": "g"
+        "kasse": "p"
         // Spezifikationen: https://www.therapie.de/profil/mattes/
     },
     {
@@ -359,3 +359,10 @@ formTest.addEventListener('submit', (e) => {
 Seite für jedeN TherapeutIn anlegen, link basteln in dem Tabellengenerator.
 Auf der Seite für jeden Therapeuten die Adresse mit openstreetmaps einbinden!!
 */
+
+//// HTML 
+
+function togglePopup() {
+    let popup = document.getElementById("popups");
+    popup.classList.toggle("show");
+}
