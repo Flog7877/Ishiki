@@ -75,10 +75,14 @@ th, td {
   vertical-align: top;
 }
 
+th {
+  white-space: nowrap;
+}
+
 .Therapeutentabelle br {
-  display: block; /* makes it have a width */
-  content: ""; /* clears default height */
-  margin-top: 10px; /* change this to whatever height you want it */
+  display: block; 
+  content: "";
+  margin-top: 10px; /* Höhe!!! */
 }
 
 /*
