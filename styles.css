@@ -45,8 +45,8 @@ body {
   /* togglePopup() */
   .popup .show {
     visibility: visible;
-    -webkit-animation: fadeIn 0.5s;
-    animation: fadeIn 0.5s
+    -webkit-animation: fadeIn 0.2s;
+    animation: fadeIn 0.2s
   }
   
   /* Animation (fade in,  popup) */
@@ -72,6 +72,7 @@ body {
 
 th, td {
   padding: 10px;
+  vertical-align: top;
 }
 
 .Therapeutentabelle br {
@@ -83,3 +84,41 @@ th, td {
 /*
 Bei aufspalten() das letze Element entfernen, so dass kein <br> hinzugefügt wird
 */
+
+/*div Ausrichtung :*/
+
+.kat {
+  float: left;
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+
+.kat-title {
+  padding-bottom: 7px;
+}
+
+.adresse {
+  clear: both;
+}
+
+.Fertig {
+  background-color: #555;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+
+.Fertig:hover {
+  background-color: lightgreen;
+
+}
+
+.Fertig:active {
+  background-color: #3e8e41;
+}

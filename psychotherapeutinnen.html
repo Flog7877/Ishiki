@@ -9,49 +9,49 @@
 </head>
 <body>
     <div>
-        <h1>Therapieangebot in Tübingen</h1>
+        <h1><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-heart"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 15 6 6"/><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/></svg> Therapieangebot in Tübingen</h1>
     </div>
     <div>
-        <h2>Filter:</h2>
         Hier können Präferenzen angegeben werden. Es werden nur Therapeut*innen angezeigt, die angekreuzte Eigenschaften erfüllen!
     </div>
     <br>
     <form>
-        <div class="Geschlecht">
-            <div>
-                <strong>Geschlecht:</strong>
+        <div class='praef'>
+            <div class='kat'>
+                <div class="kat-title">
+                    <strong>Geschlechtliche Identität:</strong>
+                </div>
+                <input type="checkbox" value="m" checked>Männlicher Therapeut<br>
+                <input type="checkbox" value="w" checked>Weibliche Therapeutin<br>
             </div>
-            <input type="checkbox" value="m" checked>Männlich<br>
-            <input type="checkbox" value="w" checked>Weiblich<br>
-        </div>
-        <br>
-        <div class="Kasse">
-        <div>
-                <strong>Kasse:</strong>
+            <div class='kat'>
+                <div class="kat-title">
+                    <strong>Versicherung:</strong>
+                </div>
+                <input type="checkbox" value="g" checked>Gesetzliche Krankenkasse<br>
+                <input type="checkbox" value="p" checked>Privatversicherung<br>
             </div>
-            <input type="checkbox" value="g" checked>Gesetzliche Krankenkasse<br>
-            <input type="checkbox" value="p" checked>Privatversicherung<br>
+            <div class='kat'>
+                <div class="kat-title">
+                    <strong>Stadtteile:</strong>
+                </div>
+                <input type="checkbox" value="zentrum" checked>Zentrum<br>
+                <input type="checkbox" value="unknown" checked>Andere Stadtteile<br> <!-- Hier fehlen noch welche-->
+            </div>
+            <div class='kat'>
+                <div class="kat-title">
+                    <strong>Therapieformen:</strong>
+                </div> <!--Hier fehlen wahrscheinlich auch noch welche-->
+                <input type="checkbox" value="verhalten" checked>Verhaltenstherapie<br>
+                <input type="checkbox" value="tiefe" checked>Tiefenpsychologisches Verfahren<br>
+            </div>
+            <br>
+            <div class="adresse">
+                <span><strong>Adresse: </strong></span><input type="text" value="" placeholder="Straße Nr., PLZ Stadt"> <span class="popup" onclick="togglePopup()"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="popuptext" id="popups">Hier kann man (optional) die eigene Adresse angeben, dann werden Wegbeschreibungen zur Praxis des/ der Therapeut*in erstellt!</span></span> 
+            </div>
         </div>
         <br>
-        <div>
-            <strong>Stadtteile:</strong>
-        </div>
-            <input type="checkbox" value="zentrum" checked>Zentrum<br>
-            <input type="checkbox" value="unknown" checked>Andere Stadtteile<br> <!-- Hier fehlen noch welche-->
-        </div>
-        <br>
-        <div>
-            <strong>Therapieformen:</strong> <!-- Muss noch gescriptet werden-->
-        </div>
-            <input type="checkbox" value="verhalten" checked>Verhaltenstherapie<br>
-            <input type="checkbox" value="tiefe" checked>Tiefenpsychologisches Verfahren<br>
-        </div>
-        <br>
-        <div>
-            <span><strong>Adresse: </strong></span><input type="text" value=""> <span class="popup" onclick="togglePopup()"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="popuptext" id="popups">Hier kann man (optional) die eigene Adresse angeben, dann werden Wegbeschreibungen zur Praxis des/ der Therapeut*in erstellt!</span></span> 
-        </div>
-        <br>
-        <button type="submit">Fertig    </button>
+        <button type="submit" class="Fertig">Fertig</button>
     </form>
     <br>
     <br>
