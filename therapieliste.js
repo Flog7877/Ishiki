@@ -1,4 +1,4 @@
-let ab = "Anfrage per Mailbox";
+let ab = "Anfrage per Mailbox", nA = "k.A.";
 
 let liste = [
 
@@ -16,7 +16,8 @@ let liste = [
         "stadtteil": "Zentrum",
         "website": "http://www.praxis-haux.de/",
         "geschlecht": "w",
-        "kasse": "g"
+        "kasse": "p",
+        "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/haux/
     },
     {
@@ -33,7 +34,8 @@ let liste = [
         "stadtteil": "Zentrum",
         "website": "",
         "geschlecht": "w",
-        "kasse": "g"
+        "kasse": "g",
+        "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/sabrina.schenk/
     },
     {
@@ -50,7 +52,8 @@ let liste = [
         "stadtteil": "Zentrum",
         "website": "",
         "geschlecht": "w",
-        "kasse": "p"
+        "kasse": "p",
+        "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/sabrina.schenk/
     },
     {
@@ -67,7 +70,8 @@ let liste = [
         "stadtteil": "Zentrum",
         "website": "https://meksmattes.de/index.php",
         "geschlecht": "w",
-        "kasse": "p"
+        "kasse": "p",
+        "therapeutenalter": Date.UTC(1957, 1, 1)
         // Spezifikationen: https://www.therapie.de/profil/mattes/
     },
     {
@@ -84,7 +88,8 @@ let liste = [
         "stadtteil": "Zentrum",
         "website": "https://www.psychotherapeut-tuebingen.de/",
         "geschlecht": "w",
-        "kasse": "p"
+        "kasse": "p",
+        "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/hardtsvaldi/
     },
     {
@@ -101,7 +106,8 @@ let liste = [
         "stadtteil": "Zentrum",
         "website": "https://www.psychotherapie-kooistra.de/",
         "geschlecht": "m",
-        "kasse": "p"
+        "kasse": "p",
+        "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/kooistra/
     }
 ];
@@ -190,6 +196,31 @@ function nameInfo() {
     return '<span class="popup" onclick="togglePopup2()"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="popuptext" id="nameInfo">Mehr Informationen zu einzelnen Therapeut*innen sind auf deren jeweiligen Seiten zu finden! Dazu einfach auf den Namen drücken.</span></span>'
 }
 
+function todayDate() {
+    let heuteTag = new Date();
+    let jahr = heuteTag.getFullYear();
+    let monat = heuteTag.getMonth();
+    let tag = heuteTag.getDate();
+
+    return Date.UTC(jahr, monat, tag);
+}
+
+function alterDesTherapeuten(datum) {
+    let laengeJahr = 365 * 24 * 60 * 60 * 1000;
+    let heute = todayDate();
+    let jahre = (heute - datum) / laengeJahr;
+    return Math.floor(jahre);
+}
+
+function hatAlter(eintragAlter) {
+    if (isNaN(eintragAlter)) {
+        return nA;
+    }
+
+    return alterDesTherapeuten(eintragAlter);
+}
+
+
 console.log(liste);
 
 /// Filter Test:
@@ -214,6 +245,11 @@ const formTest = document.querySelector('form');
 
 formTest.addEventListener('submit', (e) => {
     e.preventDefault(); // Mit dieser Methode verhindere ich, dass forms Serverzeugs macht (so kann ich das lokal händeln)
+
+    let slider = document.getElementById('schieberegler');
+    let alter = slider.value;
+
+    console.log(alter);
 
     let werte = {};
 
@@ -329,10 +365,37 @@ formTest.addEventListener('submit', (e) => {
          gefilterteListeForm = gefilterteListeForm.concat(thrForm2);
     }
 
+    let gefilterteListeAlter = [];
+
+    if (werte.keinAlter === true) {
+        let ohneAlter = gefilterteListeForm.filter(obj => {
+            if (obj.therapeutenalter === nA) {
+                return true;
+            } else if (alterDesTherapeuten(obj.therapeutenalter) <= alter){    
+                return true;            
+            } else {
+                return false;
+            }
+        })
+
+         gefilterteListeAlter = gefilterteListeAlter.concat(ohneAlter);
+    }
+
+    if (werte.keinAlter === false) {
+        let mitAlter = gefilterteListeForm.filter(obj => {
+            if (alterDesTherapeuten(obj.therapeutenalter) <= alter){    
+                return true;            
+            } else {
+                return false;
+            }
+        })
+
+         gefilterteListeAlter = gefilterteListeAlter.concat(mitAlter);
+    }
 
     //// HIER ENDE FILTERN
 
-    let listeFILTERED = gefilterteListeForm;
+    let listeFILTERED = gefilterteListeAlter;
 
     //// Adressfeld
 
@@ -344,18 +407,27 @@ formTest.addEventListener('submit', (e) => {
 
     console.log(adressFeld);
 
+    // SVGs
+
+    let nameIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>';
+    let telefonIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+    let erreichbarkeitIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check-2"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 14V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="m16 20 2 2 4-4"/></svg>';
+    let therapieformIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M9 13a4.5 4.5 0 0 0 3-4"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M12 13h4"/><path d="M12 18h6a2 2 0 0 1 2 2v1"/><path d="M12 8h8"/><path d="M16 8V5a2 2 0 0 1 2-2"/><circle cx="16" cy="13" r=".5"/><circle cx="18" cy="3" r=".5"/><circle cx="20" cy="21" r=".5"/><circle cx="20" cy="8" r=".5"/></svg>';
+    let websiteIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Adresse</th><th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>';
+    let alterIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact-round"><path d="M16 18a4 4 0 0 0-8 0"/><circle cx="12" cy="11" r="3"/><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="8" x2="8" y1="2" y2="4"/><line x1="16" x2="16" y1="2" y2="4"/></svg>';
+    
     // Tabelle erstellen!
 
     function tabelleErstellen(datensatz) {
 
         let table = '<table class="Therapeutentabelle">';
 
-        table += `<tr><th>Name ${nameInfo()}</th><th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Telefonnummer</th><th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check-2"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 14V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="m16 20 2 2 4-4"/></svg> Tel. Erreichbarkeit</th><th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M9 13a4.5 4.5 0 0 0 3-4"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M12 13h4"/><path d="M12 18h6a2 2 0 0 1 2 2v1"/><path d="M12 8h8"/><path d="M16 8V5a2 2 0 0 1 2-2"/><circle cx="16" cy="13" r=".5"/><circle cx="18" cy="3" r=".5"/><circle cx="20" cy="21" r=".5"/><circle cx="20" cy="8" r=".5"/></svg> Therapieform</th><th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Adresse</th><th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Website</th></tr>`;
+        table += `<tr><th>Name ${nameInfo()}</th><th>${telefonIcon} Telefonnummer</th><th>${erreichbarkeitIcon} Tel. Erreichbarkeit</th><th>${therapieformIcon} Therapieform</th><th>${websiteIcon} Website</th><th>${alterIcon} Alter</th></tr>`;
 
         datensatz.forEach(objekt =>{
             //table += '<tr><td>'+ objekt.therapeutenname + '</td><td>' + objekt.telefonnummer + '</td><td>' + objekt.erreichbarkeit + '</td><td>' + objekt.adresse + '</td><td><a href="'+ objekt.website + '" target="_blank">Website</a></td></tr>';
             //table += `<tr><td>${objekt.therapeutenname}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
-            table += `<tr><td>${linkName(objekt.seite, objekt.therapeutenname)}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
+            table += `<tr><td>${linkName(objekt.seite, objekt.therapeutenname)}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td><td>${hatAlter(objekt.therapeutenalter)}</td></tr>`;
         });
 
         table += '</table>';
