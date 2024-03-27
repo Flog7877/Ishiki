@@ -19,6 +19,7 @@ let liste = [
         "website": "http://www.praxis-haux.de/",
         "geschlecht": "w",
         "kasse": "p",
+        "jugendtherapeutIn": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/haux/
     },
@@ -37,6 +38,7 @@ let liste = [
         "website": "",
         "geschlecht": "w",
         "kasse": "p",
+        "jugendtherapeutIn": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/sabrina.schenk/
     },
@@ -55,6 +57,7 @@ let liste = [
         "website": "",
         "geschlecht": "w",
         "kasse": "p",
+        "jugendtherapeutIn": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/sabrina.schenk/
     },
@@ -73,6 +76,7 @@ let liste = [
         "website": "https://meksmattes.de/index.php",
         "geschlecht": "w",
         "kasse": "p",
+        "jugendtherapeutIn": false,
         "therapeutenalter": Date.UTC(1957, 1, 1)
         // Spezifikationen: https://www.therapie.de/profil/mattes/
     },
@@ -91,6 +95,7 @@ let liste = [
         "website": "https://www.psychotherapeut-tuebingen.de/",
         "geschlecht": "w",
         "kasse": "p",
+        "jugendtherapeutIn": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/hardtsvaldi/
     },
@@ -109,6 +114,7 @@ let liste = [
         "website": "https://www.psychotherapie-kooistra.de/",
         "geschlecht": "m",
         "kasse": "p",
+        "jugendtherapeutIn": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/kooistra/
     },
@@ -127,6 +133,7 @@ let liste = [
         "website": "http://www.drcerff.de/PRAXIS-Dr-Cerff/",
         "geschlecht": "m",
         "kasse": "p",
+        "jugendtherapeutIn": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/bernhard.cerff/
     },
@@ -145,6 +152,7 @@ let liste = [
         "website": "https://www.psychotherapie-fischer.eu/",
         "geschlecht": "m",
         "kasse": "g",
+        "jugendtherapeutIn": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/mario.fischer/
     },
@@ -163,6 +171,7 @@ let liste = [
         "website": "https://www.kunze-psychotherapie.de/",
         "geschlecht": "w",
         "kasse": "g",
+        "jugendtherapeutIn": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/michalea.kunze/
     }
@@ -280,11 +289,27 @@ function hatAlter(eintragAlter) {
         return notFoundIcon + ' ' + nA;
     }
 
-    return alterDesTherapeuten(eintragAlter);
+    return alterDesTherapeuten(eintragAlter) + 'Jahre';
 }
 
 
 console.log(liste);
+
+
+function kassenArt(art, jugend) {
+    let satz = ''
+    if (art === 'g') {
+        satz = satz + '(Für Gesetzl. und Privatversicherte)';
+    } else {
+        satz = satz + '(Für Privatversicherte)';
+    }
+
+    if (jugend === true) {
+        satz = satz + '<br><strong>Jugendtherapeut*in</strong>';
+    }
+
+    return satz;
+}
 
 /// Filter Test:
 /*
@@ -541,7 +566,7 @@ formTest.addEventListener('submit', (e) => {
         datensatz.forEach(objekt =>{
             //table += '<tr><td>'+ objekt.therapeutenname + '</td><td>' + objekt.telefonnummer + '</td><td>' + objekt.erreichbarkeit + '</td><td>' + objekt.adresse + '</td><td><a href="'+ objekt.website + '" target="_blank">Website</a></td></tr>';
             //table += `<tr><td>${objekt.therapeutenname}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
-            table += `<tr><td>${linkName(objekt.seite, objekt.therapeutenname)}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td><td>${hatAlter(objekt.therapeutenalter)}</td></tr>`;
+            table += `<tr><td>${linkName(objekt.seite, objekt.therapeutenname)}<br>${kassenArt(objekt.kasse, objekt.jugendtherapeutIn)}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td><td>${hatAlter(objekt.therapeutenalter)}</td></tr>`;
         });
 
         table += '</table>';
