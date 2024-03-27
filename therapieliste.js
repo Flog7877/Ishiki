@@ -36,7 +36,7 @@ let liste = [
         "stadtteil": "Zentrum",
         "website": "",
         "geschlecht": "w",
-        "kasse": "g",
+        "kasse": "p",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/sabrina.schenk/
     },

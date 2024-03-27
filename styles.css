@@ -22,12 +22,15 @@ body {
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 8px 0;
+    padding: 8px 8px;
     position: absolute;
     z-index: 1;
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
+    white-space: initial;
+    font-weight: normal;
+
   }
   
   /* Popup arrow */
@@ -35,7 +38,7 @@ body {
     content: "";
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 37.5%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
@@ -84,10 +87,6 @@ th {
   content: "";
   margin-top: 10px; /* Höhe!!! */
 }
-
-/*
-Bei aufspalten() das letze Element entfernen, so dass kein <br> hinzugefügt wird
-*/
 
 /*div Ausrichtung :*/
 
