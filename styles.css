@@ -119,12 +119,12 @@ Bei aufspalten() das letze Element entfernen, so dass kein <br> hinzugefügt wir
 }
 
 .Fertig:hover {
-  background-color: lightgreen;
+  background-color: rgb(67, 209, 74);
 
 }
 
 .Fertig:active {
-  background-color: #3e8e41;
+  background-color: #007904;
 }
 
 output, .alter {
