@@ -101,4 +101,28 @@ jug.innerText = jugendTherapeutinTest(datensatz);
 let webSeite = document.getElementById('webT');
 webSeite.innerHTML = webTest(datensatz.website);
 
+let addrT = document.getElementById('addr');
+addrT.innerText = datensatz.adresse;
+
 // es fehlen noch: Adresse und Spezifikationen...
+
+let test = document.getElementById('steckbrief');
+
+let weite = test.clientWidth;
+
+let hoehe = test.clientHeight;
+
+//console.log(weite);
+//console.log(hoehe);
+
+let karte = document.getElementById('karte');
+
+karte.style.height = hoehe + 'px';
+karte.style.width = weite + 'px';
+
+let weite2 = 2 * weite;
+
+let schwerpunkte = document.getElementById('spezifikationen');
+
+schwerpunkte.style.width = weite2;
+

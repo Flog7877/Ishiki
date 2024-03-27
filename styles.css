@@ -38,7 +38,7 @@ body {
     content: "";
     position: absolute;
     top: 100%;
-    left: 37.5%;
+    left: 40%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
@@ -192,4 +192,62 @@ output, .alter {
 }
 .dropdown-check-list ul.items li {
   list-style: none;
+}
+
+/* Body Styling */
+
+.psych {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.einzel {
+  padding-left: 25px;
+  padding-right: 25px;}
+
+
+.steckbrief {
+  float: left;
+}
+
+.karte {
+  margin-left: 25px;
+  clear: both;
+}
+
+.spezifikationen {
+  padding: 0;
+  font-size: larger;
+  
+  & > * {
+    display: inline;
+    
+    &:after {
+      content: ',';
+    }
+    
+    &:last-child:after {
+      content: '';
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .spezifikationen {
+      list-style: square;
+      padding-left: 30px;
+  
+    & > * {
+        display: list-item;
+        width: 33%;
+        float: left;
+      
+      &:after {
+        content: '';
+      }
+    }
+  }
+}
+
+.platzhalter {
+  clear: both;
 }

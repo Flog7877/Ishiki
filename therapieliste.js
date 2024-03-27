@@ -467,5 +467,3 @@ function togglePopup2() {
     popup.classList.toggle("show");
 }
 
-// Import Test
-

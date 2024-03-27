@@ -7,13 +7,13 @@
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <link rel="icon" type="image/x-icon" href="../icon.png">
 </head>
-<body>
+<body class="einzel">
     <!--<h1><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-construction"><rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/></svg> Ausstehend!</h1>
     <script src="../therapieliste.js"></script>-->
     <div class="avatar">
         <img src="Bilder/defaultIcon.png" width="100" style="vertical-align: middle;"><h1 class="NameDesTherapeuten" id="NameDesTherapeuten">Alexandra Haux</h1>
     </div>
-    <section class="steckbrief">
+    <section id="steckbrief" class="steckbrief">
         <div>
             <table class="EinzelSeite">
                 <tr><th>Therapeut*innenalter: </th><td id="alterTher"></td></tr>
@@ -23,11 +23,36 @@
                 <tr><th>Jugendtherapeut*in?</th><td id="jugendTher"></td></tr>
                 <tr><th>Bezahlung/ Kasse:</th><td id="kasseT"></td></tr>
                 <tr><th>Website:</th><td id="webT"></td></tr>
+                <tr><th>Adresse:</th><td id="addr"></td></tr>
             </table>
         </div>
     </section>
     <br>
     <script src="einzelseite.js" type="module"></script>
-    <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=9.03981685638428%2C48.51411690328977%2C9.068140983581545%2C48.52696502245163&amp;layer=mapnik&amp;marker=48.52054137022454%2C9.05397891998291" style="border: 1px solid black"></iframe><br/>
+    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=9.03981685638428%2C48.51411690328977%2C9.068140983581545%2C48.52696502245163&amp;layer=mapnik&amp;marker=48.52054137022454%2C9.05397891998291" id="karte" class="karte" style="border: 1px solid black"></iframe><br>
+    <section class="schwerpunkte">
+        <h2>Schwerpunkte</h2>
+        <div>
+            <ul id="spezifikationen" class="spezifikationen">
+                <li>Lebensberatung</li>
+                <li>Angst/ Phobien</li>
+                <li>Depressionen</li>
+                <li>Essstörungen</li>
+                <li>Krisenberatung</li>
+                <li>Persönlichkeitsstörung</li>
+                <li>Psychosomatik</li>
+                <li>Schmerzen</li>
+                <li>Sexualität</li>
+                <li>Stress, Burnout</li>
+                <li>Mobbing</li>
+                <li>Trauer</li>
+                <li>Trauma</li>
+                <li>Zwang</li>
+            </ul>
+        </div>
+    </section><br>
+    <div class="platzhalter">
+        <br>
+    </div>
 </body>
 </html>
