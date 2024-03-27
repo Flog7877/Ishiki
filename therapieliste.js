@@ -1,5 +1,7 @@
 let ab = "Anfrage per Mailbox", nA = "k.A.";
 
+// Arztsuche: https://www.arztsuche-bw.de/index.php?suchen=1&offset=13189&id_arzt_praxis=0&id_fachgruppe=0&id_zusatzbezeichnung=0&id_genehmigung=0&id_dmp=0&id_zusatzvertraege=0&id_sprache=0&vorname=&nachname=&zeiten=&fa_name=&plz=&ort=&strasse=&schluesselnr=&landkreis=&id_leistungsort_art=0&id_praxis_zusatz=0&sorting=adresse&direction=DESC
+
 let liste = [
 
     {
@@ -109,11 +111,66 @@ let liste = [
         "kasse": "p",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/kooistra/
+    },
+    {
+        "therapeutenname": "Bernhard Cerff",
+        "seite": "bernhard_cerff",
+        "telefonnummer": "07721 9931154",
+        "erreichbarkeit": [
+            "Dienstag: 10-13 Uhr", "Dienstag: 14-17 Uhr", "Donnerstag: 14-16 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie", "Traumatherapie"
+        ],
+        "adresse": "Hegelstraße 5/1, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "http://www.drcerff.de/PRAXIS-Dr-Cerff/",
+        "geschlecht": "m",
+        "kasse": "p",
+        "therapeutenalter": nA
+        // Spezifikationen: https://www.therapie.de/profil/bernhard.cerff/
+    },
+    {
+        "therapeutenname": "Mario Fischer",
+        "seite": "mario_fischer",
+        "telefonnummer": "07071 995676",
+        "erreichbarkeit": [
+            "Dienstag: 10-12 Uhr", "Mittwoch 10-12 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Schellingstraße 2/2, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "https://www.psychotherapie-fischer.eu/",
+        "geschlecht": "m",
+        "kasse": "g",
+        "therapeutenalter": nA
+        // Spezifikationen: https://www.therapie.de/profil/mario.fischer/
+    },
+    {
+        "therapeutenname": "Michaela Kunze",
+        "seite": "michaela_kunze",
+        "telefonnummer": "0178 8171285",
+        "erreichbarkeit": [
+            "Montag: 9-10 Uhr", "Mittwoch: 9-10 Uhr", ab
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Derendingerstraße 43, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "https://www.kunze-psychotherapie.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "therapeutenalter": nA
+        // Spezifikationen: https://www.therapie.de/profil/michalea.kunze/
     }
 ];
 
 //// Nötige Funktionen
 
+// https://de.wikipedia.org/wiki/Hilfe:Sonderzeichenreferenz
 function urlSyntax(eing) {
 
     let txtNeu = '';
@@ -146,6 +203,10 @@ function urlSyntax(eing) {
             zeichen = '%3A';
         } else if (zeichen === ';') {
             zeichen = '%3B';
+        } else if (zeichen === '/') {
+            zeichen = '%2F';
+        } else if (zeichen === "'") {
+            zeichen = '%27';
         } 
         
         txtNeu = txtNeu + zeichen;     
@@ -170,9 +231,11 @@ function routenGenerator(beg, end) {
 
 }
 
+let notFoundIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-x"><path d="m13.5 8.5-5 5"/><path d="m8.5 8.5 5 5"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>';
+
 function webTest(str) {
     if (str === '') {
-        return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-x"><path d="m13.5 8.5-5 5"/><path d="m8.5 8.5 5 5"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Nicht vorhanden';
+        return notFoundIcon + ' Nicht vorhanden';
     }
 
     return `<a href="${str}" target="_blank">Website</a>`;
@@ -193,7 +256,7 @@ function linkName(seite, therapeutenName) {
 }
 
 function nameInfo() {
-    return '<span class="popup" onclick="togglePopup2()"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="popuptext" id="nameInfo">Mehr Informationen zu einzelnen Therapeut*innen sind auf deren jeweiligen Seiten zu finden! Dazu einfach auf den Namen drücken.</span></span>'
+    return '<span class="popup" onclick="togglePopup2()"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><span class="popuptext" id="nameInfo">Mehr Informationen zu einzelnen Therapeut*innen sind auf deren jeweiligen Seiten zu finden! Dazu einfach auf den Namen drücken.</span></span>'
 }
 
 function todayDate() {
@@ -214,7 +277,7 @@ function alterDesTherapeuten(datum) {
 
 function hatAlter(eintragAlter) {
     if (isNaN(eintragAlter)) {
-        return nA;
+        return notFoundIcon + ' ' + nA;
     }
 
     return alterDesTherapeuten(eintragAlter);
@@ -335,6 +398,18 @@ formTest.addEventListener('submit', (e) => {
         gefilterteListeStadt = gefilterteListeStadt.concat(teil);
     }
 
+    if (werte.sued === true) {
+        let teil = gefilterteListeKasse.filter(obj => {
+            if (obj.stadtteil === 'Südstadt') {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeStadt = gefilterteListeStadt.concat(teil);
+    }
+
     console.log(gefilterteListeStadt);
 
     // Therapieformen:
@@ -364,6 +439,22 @@ formTest.addEventListener('submit', (e) => {
 
          gefilterteListeForm = gefilterteListeForm.concat(thrForm2);
     }
+
+    if (werte.analyse === true) {
+        let thrForm3 = gefilterteListeStadt.filter(obj => {
+            if (istTherapieform(obj.therapieformen, 'Psychoanalyse') === true) {
+                if (gefilterteListeForm.indexOf(obj) === -1) {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        })
+
+         gefilterteListeForm = gefilterteListeForm.concat(thrForm3);
+    }
+
+    // Alter
 
     let gefilterteListeAlter = [];
 
