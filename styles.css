@@ -96,12 +96,30 @@ th {
   padding-bottom: 20px;
 }
 
+.avatar {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
 .kat-title {
   padding-bottom: 7px;
 }
 
 .adresse {
   clear: both;
+}
+
+
+
+
+.EinzelSeite th, .EinzelSeite  td {
+  border: none;
+  border-bottom: solid 1px #555;
+}
+
+.EinzelSeite td {
+  padding-left: 10px;
 }
 
 .Fertig {

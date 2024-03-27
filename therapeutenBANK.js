@@ -7,7 +7,7 @@ export const liste = [
         "seite": "alexandra_haux",
         "telefonnummer": "0152 01307666",
         "erreichbarkeit": [
-            "Montag: 9-17 Uhr", "Donnerstag: 11-17 Uhr", "Freitag: 9-15 Uhr" // Jeweils zur vollen Stunde...
+            "Montag: 9-17 Uhr", "Donnerstag: 11-17 Uhr", "Freitag: 9-15 Uhr"
         ],
         "therapieformen": [
             "Tiefenpsychologisches Verfahren"
