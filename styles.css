@@ -170,6 +170,7 @@ output, .alter {
   margin: 0;
   border: 1px solid #ccc;
   position: absolute;
+  background-color: white;
 }
 .dropdown-check-list ul.items li {
   list-style: none;

@@ -330,9 +330,9 @@ formTest.addEventListener('submit', (e) => {
 }) /// klappt einfach lol
 // Dropdownmenü*/
 
-let checkList = document.getElementById('dropdown-stadt');
+let checkList1 = document.getElementById('dropdown-stadt');
 var items = document.getElementById('items');
-        checkList.getElementsByClassName('anchor')[0].onclick = function (evt) {
+        checkList1.getElementsByClassName('anchor')[0].onclick = function (evt) {
             if (items.classList.contains('visible')){
                 items.classList.remove('visible');
                 items.style.display = "none";
@@ -349,6 +349,27 @@ var items = document.getElementById('items');
         items.onblur = function(evt) {
             items.classList.remove('visible');
         }
+
+let checkList2 = document.getElementById('dropdown-form');
+let items2 = document.getElementById('items2');
+        checkList2.getElementsByClassName('anchor')[0].onclick = function (evt) {
+            if (items2.classList.contains('visible')){
+                items2.classList.remove('visible');
+                items2.style.display = "none";
+            }
+            
+            else{
+                items2.classList.add('visible');
+                items2.style.display = "block";
+            }
+            
+            
+        }
+
+        items2.onblur = function(evt) {
+            items2.classList.remove('visible');
+        }
+
 
 // Hier beginnt der querySelector für dir form
 
@@ -532,9 +553,29 @@ formTest.addEventListener('submit', (e) => {
          gefilterteListeAlter = gefilterteListeAlter.concat(mitAlter);
     }
 
+    let gefilterteListeJugend = [];
+
+    if (werte.jugendT === false) {
+        let erwachsen = gefilterteListeAlter.filter(obj => {
+            if (obj.jugendtherapeutIn === false){    
+                return true;            
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeJugend = gefilterteListeJugend.concat(erwachsen);
+    } else {
+        gefilterteListeJugend = gefilterteListeAlter;
+    }
+
+
+
+    
+
     //// HIER ENDE FILTERN
 
-    let listeFILTERED = gefilterteListeAlter;
+    let listeFILTERED = gefilterteListeJugend;
 
     //// Adressfeld
 

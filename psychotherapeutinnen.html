@@ -47,10 +47,16 @@
             <div class='kat'>
                 <div class="kat-title">
                     <strong>Therapieform:</strong>
-                </div> <!--Hier fehlen wahrscheinlich auch noch welche-->
-                <input type="checkbox" value="verhalten" checked>Verhaltenstherapie<br>
-                <input type="checkbox" value="tiefe" checked>Tiefenpsychologisches Verfahren<br>
-                <input type="checkbox" value="analyse" checked>Psychoanalyse<br>
+                </div>
+                <div id="dropdown-form" class="dropdown-check-list" tabindex="100">
+                    <span class="anchor">Auswahl...</span>
+                    <ul class="items" id="items2">         
+                        <li><input type="checkbox" value="verhalten" checked>Verhaltenstherapie</li>
+                        <li><input type="checkbox" value="tiefe" checked>Tiefenpsychologisches Verfahren</li>
+                        <li><input type="checkbox" value="analyse" checked>Psychoanalyse</li>
+                        <li><input type="checkbox" value="jugendT">Jugendtherapeut*in</li>
+                    </ul>
+                </div>
             </div>
             <div class='kat'>
                 <div class="kat-title">
