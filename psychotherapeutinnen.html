@@ -35,9 +35,14 @@
                 <div class="kat-title">
                     <strong>Stadtteile:</strong>
                 </div>
-                <input type="checkbox" value="zentrum" checked>Zentrum<br>
-                <input type="checkbox" value="sued" checked>Südstadt<br>
-                <input type="checkbox" value="unknown" checked>Andere Stadtteile<br> <!-- Hier fehlen noch welche-->
+                <div id="dropdown-stadt" class="dropdown-check-list" tabindex="100">
+                    <span class="anchor">Auswahl...</span>
+                    <ul class="items" id="items">
+                        <li><input type="checkbox" value="zentrum" checked>Zentrum</li>
+                        <li><input type="checkbox" value="sued" checked>Südstadt</li>
+                        <li><input type="checkbox" value="unknown" checked>Andere Stadtteile</li> <!-- Hier fehlen noch welche-->
+                    </ul>
+                </div>
             </div>
             <div class='kat'>
                 <div class="kat-title">
