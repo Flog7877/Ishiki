@@ -120,9 +120,4 @@ let karte = document.getElementById('karte');
 karte.style.height = hoehe + 'px';
 karte.style.width = weite + 'px';
 
-let weite2 = 2 * weite;
-
-let schwerpunkte = document.getElementById('spezifikationen');
-
-schwerpunkte.style.width = weite2;
 

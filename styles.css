@@ -38,7 +38,7 @@ body {
     content: "";
     position: absolute;
     top: 100%;
-    left: 40%;
+    left: 37.5%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
@@ -207,10 +207,10 @@ output, .alter {
 
 .steckbrief {
   float: left;
+  padding-right: 50px;
 }
 
 .karte {
-  margin-left: 25px;
   clear: both;
 }
 
@@ -231,10 +231,10 @@ output, .alter {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .spezifikationen {
       list-style: square;
-      padding-left: 30px;
+      padding-left: 25px;
   
     & > * {
         display: list-item;
