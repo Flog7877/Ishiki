@@ -212,6 +212,7 @@ output, .alter {
 
 .karte {
   clear: both;
+  margin-right: 50px;
 }
 
 .spezifikationen {
