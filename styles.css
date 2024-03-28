@@ -257,8 +257,9 @@ output, .alter {
 
 .profilbild {
   border: solid 2px #c9c9c9;
-  border-radius: 10px;
+  border-radius: 100px;
   vertical-align: middle;
   margin-right: 15px;
   width: 100px;
+  background-color: #dbdbdb;
 }
