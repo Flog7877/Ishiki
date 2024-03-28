@@ -197,8 +197,10 @@ output, .alter {
 /* Body Styling */
 
 .einzel {
-  padding-left: 25px;
-  padding-right: 25px;}
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: 1.2em;
+}
 
 
 .steckbrief {
