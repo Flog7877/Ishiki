@@ -289,7 +289,22 @@ output, .alter {
   font-size: 1.5em;
 }
 
+.koerper h1 {
+  font-size: 175%;
+}
+
 .psych {
   margin-left: 2%;
   margin-right: 2%;
+  font-size: 1.1em;
 }
+
+.infoTher {
+  font-size: 110%;
+}
+
+/*
+.alterTherapeutIn {
+  clear: both;
+}
+*/
