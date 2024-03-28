@@ -208,6 +208,7 @@ output, .alter {
 .steckbrief {
   float: left;
   padding-right: 50px;
+  max-width: 500px;
 }
 
 .karte {

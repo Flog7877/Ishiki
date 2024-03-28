@@ -57,7 +57,7 @@ export const liste = [
         "kasse": "p",
         "jugendtherapeutIn": false,
         "therapeutenalter": nA
-        // Spezifikationen: https://www.therapie.de/profil/sabrina.schenk/
+        // Spezifikationen: https://www.therapie.de/profil/koop/
     },
     {
         "therapeutenname": "Meks Mattes",

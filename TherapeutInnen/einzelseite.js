@@ -118,6 +118,9 @@ let hoehe = test.clientHeight;
 let karte = document.getElementById('karte');
 
 karte.style.height = hoehe + 'px';
-karte.style.width = weite + 'px';
 
-
+if (weite > 500) {
+    karte.style.width = '500px';
+} else {
+    karte.style.width = weite + 'px';
+}

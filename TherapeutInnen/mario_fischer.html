@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>In Arbeit!</title>
+    <title>Mario Fischer</title>
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <link rel="icon" type="image/x-icon" href="../icon.png">
 </head>
-<body>
-    <h1><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-construction"><rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/></svg> Ausstehend!</h1>
-    <script src="../therapieliste.js"></script>
+<body class="einzel">
+    <!--<h1><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-construction"><rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/></svg> Ausstehend!</h1>
+    <script src="../therapieliste.js"></script>-->
+    <div class="avatar">
+        <img src="Bilder/defaultIcon.png" width="100" style="vertical-align: middle;"><h1 class="NameDesTherapeuten" id="NameDesTherapeuten">Mario Fischer</h1>
+    </div>
+    <section id="steckbrief" class="steckbrief">
+        <div>
+            <table class="EinzelSeite">
+                <tr><th>Therapeut*innenalter: </th><td id="alterTher"></td></tr>
+                <tr><th>Telefonnummer: </th><td id="telNummer"></td></tr>
+                <tr><th>Tel. Erreichbarkeit: </th><td id="erreichbarkeitT"></td></tr>
+                <tr><th>Angebotene Therapieformen:</th><td id="therForm"></td></tr>
+                <tr><th>Jugendtherapeut*in?</th><td id="jugendTher"></td></tr>
+                <tr><th>Bezahlung/ Kasse:</th><td id="kasseT"></td></tr>
+                <tr><th>Website:</th><td id="webT"></td></tr>
+                <tr><th>Adresse:</th><td id="addr"></td></tr>
+            </table>
+        </div>
+    </section>
+    <br>
+    <script src="einzelseite.js" type="module"></script>
+    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=9.026126861572267%2C48.499886367355025%2C9.08449172973633%2C48.528087656790575&amp;layer=mapnik&amp;marker=48.513979300024666%2C9.055306799999926" id="karte" class="karte" style="border: 1px solid black"></iframe><br>
+    <section class="schwerpunkte">
+        <h2>Schwerpunkte</h2>
+        <div>
+            <ul id="spezifikationen" class="spezifikationen">
+                <li>Keine Angaben</li>
+            </ul>
+        </div>
+    </section><br>
+    <div class="platzhalter">
+        <br>
+    </div>
 </body>
 </html>
