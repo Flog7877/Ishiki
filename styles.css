@@ -189,6 +189,7 @@ output, .alter {
   border: 1px solid #ccc;
   position: absolute;
   background-color: white;
+  z-index: 9;
 }
 .dropdown-check-list ul.items li {
   list-style: none;
