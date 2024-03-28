@@ -328,3 +328,7 @@ output, .alter {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.kosten {
+  vertical-align: -9%;
+}

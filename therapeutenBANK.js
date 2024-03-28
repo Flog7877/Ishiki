@@ -18,6 +18,7 @@ export const liste = [
         "geschlecht": "w",
         "kasse": "p",
         "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": true,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/haux/
     },
@@ -37,6 +38,7 @@ export const liste = [
         "geschlecht": "w",
         "kasse": "p",
         "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": true,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/sabrina.schenk/
     },
@@ -56,6 +58,7 @@ export const liste = [
         "geschlecht": "w",
         "kasse": "p",
         "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/koop/
     },
@@ -75,6 +78,7 @@ export const liste = [
         "geschlecht": "w",
         "kasse": "p",
         "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": true,
         "therapeutenalter": Date.UTC(1957, 1, 1)
         // Spezifikationen: https://www.therapie.de/profil/mattes/
     },
@@ -94,6 +98,7 @@ export const liste = [
         "geschlecht": "w",
         "kasse": "p",
         "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/hardtsvaldi/
     },
@@ -113,6 +118,7 @@ export const liste = [
         "geschlecht": "m",
         "kasse": "p",
         "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/kooistra/
     },
@@ -132,6 +138,7 @@ export const liste = [
         "geschlecht": "m",
         "kasse": "p",
         "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": true,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/bernhard.cerff/
     },
@@ -151,6 +158,7 @@ export const liste = [
         "geschlecht": "m",
         "kasse": "g",
         "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/mario.fischer/
     },
@@ -170,6 +178,7 @@ export const liste = [
         "geschlecht": "w",
         "kasse": "g",
         "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/michalea.kunze/
     }

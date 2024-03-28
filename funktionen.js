@@ -92,3 +92,14 @@ export function hatAlter(eintragAlter) {
 
     return alterDesTherapeuten(eintragAlter) + 'Jahre';
 }
+
+export function duplikatElem(arr) {
+    let listeTatsächlich = [];
+
+    for (let element of arr) {
+        if (listeTatsächlich.indexOf(element) === -1) {
+            listeTatsächlich.push(element);
+        }
+    }
+    return listeTatsächlich;
+}

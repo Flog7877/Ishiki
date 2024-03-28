@@ -12,6 +12,8 @@ import { urlSyntax } from "./funktionen.js";
 
 import { todayDate, alterDesTherapeuten, hatAlter } from "./funktionen.js";
 
+import { duplikatElem } from "./funktionen.js";
+
 function aufspalten(arr){
     let ausgabe = '';
     for (let eintrag of arr) {
@@ -30,6 +32,8 @@ function routenGenerator(beg, end) {
 }
 
 let notFoundIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-x"><path d="m13.5 8.5-5 5"/><path d="m8.5 8.5 5 5"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>';
+let warningIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>';
+
 
 function webTest(str) {
     if (str === '') {
@@ -55,22 +59,6 @@ function linkName(seite, therapeutenName) {
 
 function nameInfo() {
     return '<span class="popup" onclick="togglePopup2()"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><span class="popuptext" id="nameInfo">Mehr Informationen zu einzelnen Therapeut*innen sind auf deren jeweiligen Seiten zu finden! Dazu einfach auf den Namen drücken.</span></span>'
-}
-
-
-function kassenArt(art, jugend) {
-    let satz = ''
-    if (art === 'g') {
-        satz = satz + '(Für Gesetzl. und Privatversicherte)';
-    } else {
-        satz = satz + '(Für Privatversicherte)';
-    }
-
-    if (jugend === true) {
-        satz = satz + '<br><strong>Jugendtherapeut*in</strong>';
-    }
-
-    return satz;
 }
 
 let checkList1 = document.getElementById('dropdown-stadt');
@@ -166,6 +154,27 @@ formTest.addEventListener('submit', (e) => {
 
     console.log(werte);
 
+    // Funktion für unten:
+
+    function kassenArt(art, jugend, kosten) {
+        let satz = ''
+        if (art === 'g') {
+            satz = satz + '(Für Gesetzl. und Privatversicherte)';
+        } else {
+            satz = satz + '(Für Privatversicherte)';
+        }
+    
+        if (jugend === true) {
+            satz = satz + '<br><strong>Jugendtherapeut*in</strong>';
+        }
+    
+        if (kosten === true && werte.p === false) {
+            satz = satz + '<br>' + warningIcon + ' <a href="Infos/kostenerstattungsverfahren.html" target="_blank">KEV</a>';
+        }
+    
+        return satz;
+    }   
+
     // Sortierungsparameter:
 
     let sortKat;
@@ -211,15 +220,7 @@ formTest.addEventListener('submit', (e) => {
     let gefilterteListeKasse = [];
 
     if (werte.p === true) {
-        let priv = gefilterteListeGeschl.filter(obj => {
-            if (obj.kasse === 'p') {
-                return true;
-            } else {
-                return false;
-            }
-        })
-
-        gefilterteListeKasse = gefilterteListeKasse.concat(priv);
+        gefilterteListeKasse = gefilterteListeKasse.concat(gefilterteListeGeschl);
     }
 
     if (werte.g === true) {
@@ -233,6 +234,20 @@ formTest.addEventListener('submit', (e) => {
 
         gefilterteListeKasse = gefilterteListeKasse.concat(gesetzl);
     }
+
+    if (werte.k === true) {
+        let kostenEr = gefilterteListeGeschl.filter(obj => {
+            if (obj.kostenerstattungsverfahren === true) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeKasse = gefilterteListeKasse.concat(kostenEr);
+    }
+
+    gefilterteListeKasse = duplikatElem(gefilterteListeKasse);
 
     // console.log(gefilterteListeKasse);
 
@@ -378,17 +393,6 @@ formTest.addEventListener('submit', (e) => {
         return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
       }; 
 
-    function duplikatElem(arr) {
-        let listeTatsächlich = [];
-
-        for (let element of arr) {
-            if (listeTatsächlich.indexOf(element) === -1) {
-                listeTatsächlich.push(element);
-            }
-        }
-        return listeTatsächlich;
-    }
-
     let sortierteListeKatZuweisung = duplikatElem(quickSortZuweisung(gefilterteListeJugend, sortKat));
 
     function listeSortieren(liste, kat, zuweisung) {
@@ -428,7 +432,7 @@ formTest.addEventListener('submit', (e) => {
         adressFeld = txt.value;
     })
 
-    console.log(adressFeld);
+    //console.log(adressFeld);
 
     // SVGs
 
@@ -450,7 +454,7 @@ formTest.addEventListener('submit', (e) => {
         datensatz.forEach(objekt =>{
             //table += '<tr><td>'+ objekt.therapeutenname + '</td><td>' + objekt.telefonnummer + '</td><td>' + objekt.erreichbarkeit + '</td><td>' + objekt.adresse + '</td><td><a href="'+ objekt.website + '" target="_blank">Website</a></td></tr>';
             //table += `<tr><td>${objekt.therapeutenname}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
-            table += `<tr><td>${linkName(objekt.seite, objekt.therapeutenname)}<br>${kassenArt(objekt.kasse, objekt.jugendtherapeutIn)}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td><td>${hatAlter(objekt.therapeutenalter)}</td></tr>`;
+            table += `<tr><td>${linkName(objekt.seite, objekt.therapeutenname)}<br>${kassenArt(objekt.kasse, objekt.jugendtherapeutIn, objekt.kostenerstattungsverfahren)}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td><td>${hatAlter(objekt.therapeutenalter)}</td></tr>`;
         });
 
         table += '</table>';
