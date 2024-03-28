@@ -318,3 +318,7 @@ output, .alter {
   margin-left: -2em;
   margin-top: -0.5em;
 }
+
+.adresseInfo > * {
+  vertical-align: -11%; /* So verschiebe ich es vertikal */
+}
