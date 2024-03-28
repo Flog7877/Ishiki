@@ -269,7 +269,7 @@ output, .alter {
 }
 
 .notfall-inhalt {
-  padding: 2vw;
+  padding: 2em;
   padding-top: 0%;
 }
 
@@ -279,14 +279,14 @@ output, .alter {
 
 .notfall-nummer {
   text-align: center;
-  margin: 1vw;
+  margin: 1em;
   font-weight: bolder;
 }
 
 .koerper {
   margin-left: 6%;
   margin-right: 7%;
-  font-size: 2vw;
+  font-size: 1.5em;
 }
 
 .psych {
