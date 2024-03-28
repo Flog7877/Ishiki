@@ -1,56 +1,16 @@
 let ab = "Anfrage per Mailbox", nA = "k.A.";
 
-// Arztsuche: https://www.arztsuche-bw.de/index.php?suchen=1&offset=13189&id_arzt_praxis=0&id_fachgruppe=0&id_zusatzbezeichnung=0&id_genehmigung=0&id_dmp=0&id_zusatzvertraege=0&id_sprache=0&vorname=&nachname=&zeiten=&fa_name=&plz=&ort=&strasse=&schluesselnr=&landkreis=&id_leistungsort_art=0&id_praxis_zusatz=0&sorting=adresse&direction=DESC
-
 import { liste } from "./therapeutenBANK.js";
 
-console.log(liste)
+// console.log(liste)
 
 //// Nötige Funktionen
 
-// https://de.wikipedia.org/wiki/Hilfe:Sonderzeichenreferenz
-function urlSyntax(eing) {
+import { quickSort } from "./funktionen.js";
 
-    let txtNeu = '';
-    let zeichen;
+import { urlSyntax } from "./funktionen.js";
 
-    for (let i = 0; i < eing.length; i++) {
-        zeichen = eing.charAt(i);
-
-        if (zeichen === ' ') {
-            zeichen = '+';
-        } else if ( zeichen === ',') {
-            zeichen = '%2C';
-        } else if (zeichen === 'ö') {
-            zeichen = '%C3%B6';
-        } else if (zeichen === 'ü') {
-            zeichen = '%C3%BC';
-        } else if (zeichen === 'ß') {
-            zeichen = '%C3%9F';
-        } else if (zeichen === 'ä') {
-            zeichen = '%C3%A4';
-        } else if (zeichen === 'Ä') {
-            zeichen = '%C3%84';
-        } else if (zeichen === 'Ö') {
-            zeichen = '%C3%96';
-        } else if (zeichen === 'Ü') {
-            zeichen = '%C3%9C';
-        } else if (zeichen === '.') {
-            zeichen = '%2E';
-        } else if (zeichen === ':') {
-            zeichen = '%3A';
-        } else if (zeichen === ';') {
-            zeichen = '%3B';
-        } else if (zeichen === '/') {
-            zeichen = '%2F';
-        } else if (zeichen === "'") {
-            zeichen = '%27';
-        } 
-        
-        txtNeu = txtNeu + zeichen;     
-    }
-    return txtNeu;
-}
+import { todayDate, alterDesTherapeuten, hatAlter } from "./funktionen.js";
 
 function aufspalten(arr){
     let ausgabe = '';
@@ -97,33 +57,6 @@ function nameInfo() {
     return '<span class="popup" onclick="togglePopup2()"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><span class="popuptext" id="nameInfo">Mehr Informationen zu einzelnen Therapeut*innen sind auf deren jeweiligen Seiten zu finden! Dazu einfach auf den Namen drücken.</span></span>'
 }
 
-function todayDate() {
-    let heuteTag = new Date();
-    let jahr = heuteTag.getFullYear();
-    let monat = heuteTag.getMonth();
-    let tag = heuteTag.getDate();
-
-    return Date.UTC(jahr, monat, tag);
-}
-
-function alterDesTherapeuten(datum) {
-    let laengeJahr = 365 * 24 * 60 * 60 * 1000;
-    let heute = todayDate();
-    let jahre = (heute - datum) / laengeJahr;
-    return Math.floor(jahre);
-}
-
-function hatAlter(eintragAlter) {
-    if (isNaN(eintragAlter)) {
-        return notFoundIcon + ' ' + nA;
-    }
-
-    return alterDesTherapeuten(eintragAlter) + 'Jahre';
-}
-
-
-//console.log(liste);
-
 
 function kassenArt(art, jugend) {
     let satz = ''
@@ -139,25 +72,6 @@ function kassenArt(art, jugend) {
 
     return satz;
 }
-
-/// Filter Test:
-/*
-const formTest = document.querySelector('form');
-
-formTest.addEventListener('submit', (e) => {
-    e.preventDefault(); // Mit dieser Methode verhindere ich, dass forms Serverzeugs macht (so kann ich daslokal händeln)
-    
-    let werte = [];
-
-    document.querySelectorAll('[type="checkbox"]').forEach(item => {
-        if (item.checked === true) {
-            werte.push(item.value);
-        }
-    })
-
-    console.log(werte);
-}) /// klappt einfach lol
-// Dropdownmenü*/
 
 let checkList1 = document.getElementById('dropdown-stadt');
 var items = document.getElementById('items');
@@ -199,8 +113,28 @@ let items2 = document.getElementById('items2');
             items2.classList.remove('visible');
         }
 
+let checkList3 = document.getElementById('dropdown-sortierung');
+let items3 = document.getElementById('items3');
+        checkList3.getElementsByClassName('anchor')[0].onclick = function (evt) {
+            if (items3.classList.contains('visible')){
+                items3.classList.remove('visible');
+                items3.style.display = "none";
+            }
+            
+            else{
+                items3.classList.add('visible');
+                items3.style.display = "block";
+            }
+            
+            
+        }
 
-// Hier beginnt der querySelector für dir form
+        items3.onblur = function(evt) {
+            items3.classList.remove('visible');
+        }
+
+
+// Hier beginnt der querySelector für die HTML-form
 
 const formTest = document.querySelector('form');
 
@@ -222,7 +156,29 @@ formTest.addEventListener('submit', (e) => {
         }
     })
 
+    document.querySelectorAll('[type="radio"]').forEach(item => {
+        if (item.checked === true) {
+            werte[item.value] = true;
+        } else if (item.checked === false) {
+            werte[item.value] = false;
+        }
+    })
+
     console.log(werte);
+
+    // Sortierungsparameter:
+
+    let sortKat;
+
+    if (werte.therapeutenname === true) {
+        sortKat = 'therapeutenname'
+    } else if (werte.stadtteil === true) {
+        sortKat = 'stadtteil';
+    } else if (werte.geschl === true) {
+        sortKat = 'geschlecht';
+    }
+
+    // Filterprozess:
 
     let gefilterteListeGeschl = [];
 
@@ -308,7 +264,7 @@ formTest.addEventListener('submit', (e) => {
         gefilterteListeStadt = gefilterteListeStadt.concat(teil);
     }
 
-    console.log(gefilterteListeStadt);
+    // console.log(gefilterteListeStadt);
 
     // Therapieformen:
 
@@ -398,13 +354,71 @@ formTest.addEventListener('submit', (e) => {
         gefilterteListeJugend = gefilterteListeAlter;
     }
 
-
-
-    
-
     //// HIER ENDE FILTERN
 
-    let listeFILTERED = gefilterteListeJugend;
+    // Sortieren:
+
+    const quickSortZuweisung = (arr, kat) => {
+        if (arr.length <= 1) {
+          return arr;
+        }
+      
+        let pivot = arr[0][kat];
+        let leftArr = [];
+        let rightArr = [];
+      
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i][kat] < pivot) {
+            leftArr.push(arr[i][kat]);
+          } else {
+            rightArr.push(arr[i][kat]);
+          }
+        }
+      
+        return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
+      }; 
+
+    function duplikatElem(arr) {
+        let listeTatsächlich = [];
+
+        for (let element of arr) {
+            if (listeTatsächlich.indexOf(element) === -1) {
+                listeTatsächlich.push(element);
+            }
+        }
+        return listeTatsächlich;
+    }
+
+    let sortierteListeKatZuweisung = duplikatElem(quickSortZuweisung(gefilterteListeJugend, sortKat));
+
+    function listeSortieren(liste, kat, zuweisung) {
+
+        let ausgabeListe = [];
+
+        for (let eintragZuweisung of zuweisung) {
+            for (let eintragListe of liste) {
+                if ( eintragListe[kat] === eintragZuweisung) {
+                    ausgabeListe.push(eintragListe);
+                }
+            }
+        }
+
+        return ausgabeListe;
+    }
+    
+    // Hier enden die Sort-Funktionen
+
+    let listeFilteredPre = gefilterteListeJugend; // Letzte Filter-Iteration
+
+    let gefiltertUndSortiert = listeSortieren(listeFilteredPre, sortKat, sortierteListeKatZuweisung); // Erstellen der finalen Liste
+
+    if (werte.absteigend === true) {
+        gefiltertUndSortiert.reverse();
+    }
+
+    console.log(gefiltertUndSortiert);
+
+    let listeFILTERED = gefiltertUndSortiert; // Über diese Variable wird die Tabelle iteriert
 
     //// Adressfeld
 
@@ -449,12 +463,6 @@ formTest.addEventListener('submit', (e) => {
     tableContainer.innerHTML = tabelleErstellen(listeFILTERED);
 }) 
 
-
-/* 
-Seite für jedeN TherapeutIn anlegen, link basteln in dem Tabellengenerator.
-Auf der Seite für jeden Therapeuten die Adresse mit openstreetmaps einbinden!!
-*/
-
 //// HTML 
 
 function togglePopup() {
@@ -466,4 +474,5 @@ function togglePopup2() {
     let popup = document.getElementById("nameInfo");
     popup.classList.toggle("show");
 }
+
 
