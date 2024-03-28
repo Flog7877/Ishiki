@@ -221,9 +221,7 @@ output, .alter {
   & > * {
     display: inline;
     
-    &:after {
-      content: ',';
-    }
+    
     
     &:last-child:after {
       content: '';
