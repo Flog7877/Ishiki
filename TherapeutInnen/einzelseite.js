@@ -38,7 +38,7 @@ function kassenText(input, kosten) {
     }
 
     if (kosten === true) {
-        ausgabe1 += '<br><br><a href="Infos/kostenerstattungsverfahren.html" target="_blank">KEV</a> wird angeboten.'
+        ausgabe1 += '<br><br><a href="../Infos/kostenerstattungsverfahren.html" target="_blank">KEV</a> wird angeboten'
     }
     
     return ausgabe1;
