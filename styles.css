@@ -312,7 +312,7 @@ output, .alter {
   clear: both;
 }
 */
-
+.informationsangebot,
 .personenListe {
   list-style: none;
   margin-left: -2em;
@@ -331,4 +331,22 @@ output, .alter {
 
 .kosten {
   vertical-align: -9%;
+}
+
+#footer {
+  margin-top: 1em;
+}
+
+.inhalte {
+  font-size: 90%;
+  text-align: center;
+}
+
+.footnoteElement {
+  padding: 5px;
+}
+
+.footnoteElement:hover {
+  border: solid black 1px;
+  border-radius: 4px;
 }
