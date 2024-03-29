@@ -332,11 +332,30 @@ output, .alter {
   font-size: 90%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  /*Experimentell: */
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .footnoteElement {
   margin: 1em;
+  padding: 0.2em;
+  margin-bottom: 0;
+  margin-top: 5px;
+  float: left;
+}
+
+.footnoteElement:first-child {
+  margin-right: auto;
+}
+
+.footnoteElement:last-child {
+  margin-right: auto;
+}
+
+.footnoteElement {
+  margin: auto;
   padding: 0.2em;
   margin-bottom: 0;
   margin-top: 5px;
