@@ -195,13 +195,6 @@ output, .alter {
   list-style: none;
 }
 
-.einzel {
-  margin-left: 2%;
-  margin-right: 2%;
-  font-size: 1.2em;
-}
-
-
 .steckbrief {
   float: left;
   padding-right: 50px;
@@ -370,3 +363,17 @@ body {
   margin-top: auto;
   margin-bottom: 0;
 }
+
+.einzel {
+  min-height: auto;
+  display: inherit;
+  flex-direction: inherit;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: 1.1em;
+}
+
+.footerEinzel {
+  clear: both;
+}
+
