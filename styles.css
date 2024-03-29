@@ -1,7 +1,7 @@
 body {
-    padding: 1%;
-    text-align: left;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  padding: 1%;
+  text-align: left;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 
@@ -195,8 +195,6 @@ output, .alter {
   list-style: none;
 }
 
-/* Body Styling */
-
 .einzel {
   margin-left: 2%;
   margin-right: 2%;
@@ -337,16 +335,38 @@ output, .alter {
   margin-top: 1em;
 }
 
-.inhalte {
+.inhalteF {
   font-size: 90%;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .footnoteElement {
-  padding: 5px;
+  margin: 1em;
+  padding: 0.2em;
+  margin-bottom: 0;
+  margin-top: 5px;
+  float: left;
+}
+
+.footnoteElement > a {
+  text-decoration: none;
+  color: currentColor;
 }
 
 .footnoteElement:hover {
   border: solid black 1px;
   border-radius: 4px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer {
+  margin-top: auto;
+  margin-bottom: 0;
 }
