@@ -338,6 +338,12 @@ output, .alter {
   overflow-x: auto;
 }
 
+@media (max-width: 716px) {
+  .inhalteF {
+    display: inherit;
+  }
+}
+
 .footnoteElement {
   margin: 1em;
   padding: 0.2em;
