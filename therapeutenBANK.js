@@ -19,6 +19,11 @@ export const liste = [
         "kasse": "p",
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": true,
+        "spezifikationen": [
+            "Lebensberatung", "Angst, Phobien", "Depressionen", "Esstörungen", "Krisenberatung", "Persönlichkeitsstörung", "Psychomatik", "Schmerzen", "Sexualität", "Stress, Burnout", "Mobbing", "Trauer", "Trauma", "Zwang"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.03981685638428%2C48.51411690328977%2C9.068140983581545%2C48.52696502245163&amp;layer=mapnik&amp;marker=48.52054137022454%2C9.05397891998291",
+        "avatar": "defaultIcon",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/haux/
     },
@@ -39,6 +44,11 @@ export const liste = [
         "kasse": "p",
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": true,
+        "spezifikationen": [
+            "Lebensberatung", "Angst, Phobien", "Depressionen", "Esstörungen", "Krisenberatung", "Persönlichkeitsstörung", "Psychoonkologie", "Psychosen", "Schizophrenie", "Psychomatik", "Schmerzen", "Sexualität", "Stress, Burnout", "Mobbing", "Sucht", "Trauer", "Trauma", "Zwang"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.04977321624756%2C48.51633428925755%2C9.064364433288576%2C48.5233837947081&amp;layer=mapnik&amp;marker=48.51985600006949%2C9.05705850000004",
+        "avatar": "defaultIcon",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/sabrina.schenk/
     },
@@ -50,7 +60,7 @@ export const liste = [
             ab 
         ],
         "therapieformen": [
-            "Verhaltenstherapie"
+            "Verhaltenstherapie", "Schematherapie"
         ],
         "adresse": "Madergasse 10, 72072 Tübingen",
         "stadtteil": "Zentrum",
@@ -59,6 +69,11 @@ export const liste = [
         "kasse": "p",
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Lebensberatung", "Angst, Phobien", "Depressionen", "Esstörungen", "Persönlichkeitsstörung", "Psychomatik", "Schmerzen", "Sexualität", "Stress, Burnout", "Mobbing", "Trauer", "Trauma", "Zwang"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.036684036254885%2C48.51480984910794%2C9.065866470336916%2C48.528908303234836&amp;layer=mapnik&amp;marker=48.5218595666904%2C9.051275253295898",
+        "avatar": "anneKoop",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/koop/
     },
@@ -70,7 +85,7 @@ export const liste = [
             "Montag: 12:50-13:20 Uhr", "Mittwoch: 12:50-13:20 Uhr", ab 
         ],
         "therapieformen": [
-            "Verhaltenstherapie"
+            "Verhaltenstherapie", "Systemische Therapie"
         ],
         "adresse": "Uhlandstraße 11, 72072 Tübingen ",
         "stadtteil": "Zentrum",
@@ -79,6 +94,11 @@ export const liste = [
         "kasse": "p",
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": true,
+        "spezifikationen": [
+            "Lebensberatung", "Angst, Phobien", "Depressionen", "Esstörungen", "Psychosen",  "Schizophrenie", "Psychomatik", "Trauma"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.041919708251955%2C48.51086171860725%2C9.071102142333986%2C48.52496127146709&amp;layer=mapnik&amp;marker=48.517905500065886%2C9.056521100000055",
+        "avatar": "meksMattes",
         "therapeutenalter": Date.UTC(1957, 1, 1)
         // Spezifikationen: https://www.therapie.de/profil/mattes/
     },
@@ -99,6 +119,11 @@ export const liste = [
         "kasse": "p",
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Lebensberatung", "Angst, Phobien", "Akute Krisenbewältigung", "Depressionen", "Esstörungen",  "Psychomatik", "Schmerzen", "Sexualität", "Stress, Burnout", "Mobbing", "Sucht", "Trauer", "Trauma", "Zwang", "Trans*gender"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.032220840454103%2C48.50892840951089%2C9.090585708618166%2C48.53712466709843&amp;layer=mapnik&amp;marker=48.523028500370735%2C9.061403274536133",
+        "avatar": "hardtSvaldi",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/hardtsvaldi/
     },
@@ -119,6 +144,11 @@ export const liste = [
         "kasse": "p",
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.045610427856447%2C48.51020781349138%2C9.074792861938478%2C48.52430754832131&amp;layer=mapnik&amp;marker=48.51725817143506%2C9.060201644897461",
+        "avatar": "manfredKooistra",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/kooistra/
     },
@@ -130,7 +160,7 @@ export const liste = [
             "Dienstag: 10-13 Uhr", "Dienstag: 14-17 Uhr", "Donnerstag: 14-16 Uhr"
         ],
         "therapieformen": [
-            "Verhaltenstherapie", "Traumatherapie"
+            "Verhaltenstherapie", "Traumatherapie", "Schematherapie"
         ],
         "adresse": "Hegelstraße 5/1, 72072 Tübingen",
         "stadtteil": "Südstadt", 
@@ -139,6 +169,11 @@ export const liste = [
         "kasse": "p",
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": true,
+        "spezifikationen": [
+            "Depressionen", "Mobbing", "Zwang", "Persönlichkeitsstörung", "Sucht", "Stress, Burnout", "Trauma"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.040460586547853%2C48.507477080787446%2C9.069643020629885%2C48.521577575511536&amp;layer=mapnik&amp;marker=48.51452781868398%2C9.055051803588867",
+        "avatar": "bernhard_cerff",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/bernhard.cerff/
     },
@@ -159,6 +194,11 @@ export const liste = [
         "kasse": "g",
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.026126861572267%2C48.499886367355025%2C9.08449172973633%2C48.528087656790575&amp;layer=mapnik&amp;marker=48.513979300024666%2C9.055306799999926",
+        "avatar": "marioFischer",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/mario.fischer/
     },
@@ -179,6 +219,11 @@ export const liste = [
         "kasse": "g",
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Lebensberatung", "Angst, Phobien", "Depressionen", "Esstörungen", "Psychomatik", "Stress, Burnout", "Mobbing", "Trauer"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.02432441711426%2C48.49675824140964%2C9.082689285278322%2C48.52496127146709&amp;layer=mapnik&amp;marker=48.51087675011778%2C9.053536699999995",
+        "avatar": "michaelaKunze",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/michalea.kunze/
     }

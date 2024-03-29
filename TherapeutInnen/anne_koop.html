@@ -8,10 +8,8 @@
     <link rel="icon" type="image/x-icon" href="../icon.png">
 </head>
 <body class="einzel">
-    <!--<h1><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-construction"><rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/></svg> Ausstehend!</h1>
-    <script src="../therapieliste.js"></script>-->
     <div class="avatar">
-        <img src="Bilder/anneKoop.png" class="profilbild"><h1 class="NameDesTherapeuten" id="NameDesTherapeuten">Anne Koop</h1>
+        <span id="avaterDesT"></span><h1 class="NameDesTherapeuten" id="NameDesTherapeuten">Anne Koop</h1>
     </div>
     <section id="steckbrief" class="steckbrief">
         <div>
@@ -28,31 +26,16 @@
         </div>
     </section>
     <br>
-    <script src="einzelseite.js" type="module"></script>
-    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=9.036684036254885%2C48.51480984910794%2C9.065866470336916%2C48.528908303234836&amp;layer=mapnik&amp;marker=48.5218595666904%2C9.051275253295898" id="karte" class="karte" style="border: 1px solid black"></iframe><br>
+    <span id="karteIFRAME"></span>
     <br>
     <section class="schwerpunkte">
         <h2>Schwerpunkte</h2>
-        <div>
-            <ul id="spezifikationen" class="spezifikationen">
-                <li>Lebensberatung</li>
-                <li>Angst/ Phobien</li>
-                <li>Depressionen</li>
-                <li>Essstörungen</li>
-                <li>Persönlichkeitsstörung</li>
-                <li>Psychosomatik</li>
-                <li>Schmerzen</li>
-                <li>Sexualität</li>
-                <li>Stress, Burnout</li>
-                <li>Mobbing</li>
-                <li>Trauer</li>
-                <li>Trauma</li>
-                <li>Zwang</li>
-            </ul>
+        <div class="spezifikationenListe" id="spezifikationenListe">
         </div>
     </section><br>
     <div class="platzhalter">
         <br>
     </div>
+    <script src="einzelseite.js" type="module"></script>
 </body>
 </html>

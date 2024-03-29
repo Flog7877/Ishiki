@@ -27,12 +27,21 @@ function aufspalten(arr){
     return ausgabe;
 }
 
-function kassenText(input) {
+function kassenText(input, kosten) {
+
+    let ausgabe1 = '';
+
     if (input === 'p') {
-        return 'Therapeut*in für Privatversicherte';
-    } else {
-        return 'Therapeut*in für Gesetzl. sowie Privatversicherte';
+        ausgabe1 += 'Therapeut*in für Privatversicherte';
+    } else  if (input === 'g'){
+        ausgabe1 +='Therapeut*in für Gesetzl. sowie Privatversicherte';
     }
+
+    if (kosten === true) {
+        ausgabe1 += '<br><br><a href="Infos/kostenerstattungsverfahren.html" target="_blank">KEV</a> wird angeboten.'
+    }
+    
+    return ausgabe1;
 }
 
 function jugendTherapeutinTest(arg) {
@@ -80,6 +89,8 @@ function webTest(str) {
 
 let datensatz = datenT[0];
 
+console.log(datensatz);
+
 let altT = document.getElementById('alterTher');
 altT.innerHTML = hatAlter(datensatz.therapeutenalter);
 
@@ -93,7 +104,7 @@ let forM = document.getElementById('therForm');
 forM.innerHTML = aufspalten(datensatz.therapieformen);
 
 let kasseTher = document.getElementById('kasseT');
-kasseTher.innerText = kassenText(datensatz.kasse);
+kasseTher.innerHTML = kassenText(datensatz.kasse, datensatz.kostenerstattungsverfahren);
 
 let jug = document.getElementById('jugendTher');
 jug.innerText = jugendTherapeutinTest(datensatz);
@@ -103,6 +114,10 @@ webSeite.innerHTML = webTest(datensatz.website);
 
 let addrT = document.getElementById('addr');
 addrT.innerText = datensatz.adresse;
+
+let karteHTML = document.getElementById('karteIFRAME');
+karteHTML.innerHTML = `<iframe src="${datensatz.karte}" id="karte" class="karte" style="border: 1px solid black"></iframe><br>`;
+
 
 // es fehlen noch: Adresse und Spezifikationen...
 
@@ -124,3 +139,21 @@ if (weite > 500) {
 } else {
     karte.style.width = weite + 'px';
 }
+
+function listeGenerieren(obj) {
+    let ausgabe = '<ul id="spezifikationen" class="spezifikationen">';
+
+    for (let eintrag of obj.spezifikationen) {
+        ausgabe += '<li>' + eintrag + '</li>';
+    }
+
+    return ausgabe + '</ul>';
+}
+
+let spezifikationenHTML = document.getElementById('spezifikationenListe');
+
+spezifikationenHTML.innerHTML = listeGenerieren(datensatz);
+
+
+let avatarTher = document.getElementById('avaterDesT');
+avatarTher.innerHTML = `<img src="Bilder/${datensatz.avatar}.png" class="profilbild" id="profilbild">`;

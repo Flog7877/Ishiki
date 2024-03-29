@@ -8,32 +8,37 @@ import { liste } from "./therapeutenBANK.js";
 
 import { quickSort } from "./funktionen.js";
 
-import { urlSyntax } from "./funktionen.js";
-
 import { todayDate, alterDesTherapeuten, hatAlter } from "./funktionen.js";
 
 import { duplikatElem } from "./funktionen.js";
 
+let warningIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>';
+let infoIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>';
+
 function aufspalten(arr){
     let ausgabe = '';
     for (let eintrag of arr) {
-        ausgabe+= eintrag + '<br>';
+
+        if (eintrag === ab) {
+            ausgabe += eintrag + ' <a href="Infos/Mailboxanfrage.html" target="_blank">'+ infoIcon + '</a><br>';
+        } else {
+            ausgabe+= eintrag + '<br>';
+        }        
     }
 
     return ausgabe;
 }
 
 function routenGenerator(beg, end) {
-    let begURL = urlSyntax(beg);
-    let endURL = urlSyntax(end);
+
+    let begURL = encodeURIComponent(beg);
+    let endURL = encodeURIComponent(end);
 
     return 'https://www.google.com/maps/dir/?api=1&origin=' + begURL + '&destination=' + endURL + '&hl=de';
 
 }
 
 let notFoundIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-x"><path d="m13.5 8.5-5 5"/><path d="m8.5 8.5 5 5"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>';
-let warningIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>';
-
 
 function webTest(str) {
     if (str === '') {
@@ -127,12 +132,12 @@ let items3 = document.getElementById('items3');
 const formTest = document.querySelector('form');
 
 formTest.addEventListener('submit', (e) => {
-    e.preventDefault(); // Mit dieser Methode verhindere ich, dass forms Serverzeugs macht (so kann ich das lokal händeln)
+    e.preventDefault(); 
 
     let slider = document.getElementById('schieberegler');
     let alter = slider.value;
 
-    console.log(alter);
+    // console.log(alter);
 
     let werte = {};
 
@@ -323,6 +328,48 @@ formTest.addEventListener('submit', (e) => {
          gefilterteListeForm = gefilterteListeForm.concat(thrForm3);
     }
 
+    if (werte.systemisch === true) {
+        let thrForm4 = gefilterteListeStadt.filter(obj => {
+            if (istTherapieform(obj.therapieformen, 'Systemische Therapie') === true) {
+                if (gefilterteListeForm.indexOf(obj) === -1) {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        })
+
+         gefilterteListeForm = gefilterteListeForm.concat(thrForm4);
+    }
+
+    if (werte.schema === true) {
+        let thrForm5 = gefilterteListeStadt.filter(obj => {
+            if (istTherapieform(obj.therapieformen, 'Schematherapie') === true) {
+                if (gefilterteListeForm.indexOf(obj) === -1) {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        })
+
+         gefilterteListeForm = gefilterteListeForm.concat(thrForm5);
+    }
+
+    if (werte.trauma === true) {
+        let thrForm6 = gefilterteListeStadt.filter(obj => {
+            if (istTherapieform(obj.therapieformen, 'Traumatherapie') === true) {
+                if (gefilterteListeForm.indexOf(obj) === -1) {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        })
+
+         gefilterteListeForm = gefilterteListeForm.concat(thrForm6);
+    }
+
     // Alter
 
     let gefilterteListeAlter = [];
@@ -396,6 +443,10 @@ formTest.addEventListener('submit', (e) => {
     let sortierteListeKatZuweisung = duplikatElem(quickSortZuweisung(gefilterteListeJugend, sortKat));
 
     function listeSortieren(liste, kat, zuweisung) {
+
+        if (liste.length === 1) {
+            return liste;
+        }
 
         let ausgabeListe = [];
 
