@@ -332,8 +332,29 @@ formTest.addEventListener('submit', (e) => {
         return table;
     }
 
+    function tabelleGeneratorOhneKarte(datensatz) {
+
+        let table = '<table class = "Therapeutentabelle">';
+
+        table += `<tr><th>${praxisIcon} Praxis</th><th>${personIcon} Psychiater*innen</th><th>${telefonIconNeu} Nummer</th><th>${erreichbarkeitIconNeu} Erreichbarkeit</th><th>${adresseIcon} Adresse</th><th>${webIcon} Website</th></tr>`
+
+        datensatz.forEach(objekt => {
+            table += `<tr><td>${psychKasse(objekt.praxis, objekt.kasse)}</td><td>${aufspaltenTable(objekt.psychiaterNamen)}</td><td>${objekt.psychiaterNummer}</td><td>${aufspaltenTable(objekt.telefonischeErreichbarkeit)}</td><td>${objekt.psychiaterAdresse} (${objekt.praxisStadtteil})<br><a href="${routenGenerator(adressFeld, objekt.psychiaterAdresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></<tr>`
+        });
+
+        table += '</table>'
+
+        return table;
+    }
+
     const tableContainerP = document.getElementById('table-container');
 
-    tableContainerP.innerHTML = tabelleGenerator(listeFERTIG);
+    //tableContainerP.innerHTML = tabelleGenerator(listeFERTIG);
+
+    if (werte.karteToggle === true) {
+        tableContainerP.innerHTML = tabelleGenerator(listeFERTIG);
+    } else {
+        tableContainerP.innerHTML = tabelleGeneratorOhneKarte(listeFERTIG);
+    }
 
 }) 
