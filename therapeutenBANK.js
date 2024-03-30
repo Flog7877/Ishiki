@@ -228,3 +228,43 @@ export const liste = [
         // Spezifikationen: https://www.therapie.de/profil/michalea.kunze/
     }
 ];
+
+
+export const listePsychiater = [
+    {
+        "praxis": "Gemeinschaftspraxis Mayer und Pape",
+        "psychiaterNamen": [
+            "Bernhard Mayer", "Christian Pape"
+        ],
+        "psychiaterAdresse": "Am Markt 13, 72072 Tübingen",
+        "praxisStadtteil": "Zentrum",
+        "karteIFRAME": "https://www.openstreetmap.org/export/embed.html?bbox=9.046983718872072%2C48.51703075584688%2C9.061574935913088%2C48.524080164379676&amp;layer=mapnik&amp;marker=48.52055558274374%2C9.054279327392578",
+        "psychiaterNummer": "07071 5015",
+        "telefonischeErreichbarkeit": [
+            "Mo-Fr: 9-13 Uhr", "Mo, Do: 17-19 Uhr", "Di: 14:30- 17 Uhr"
+        ],
+        "kasse": "g",
+        "geschlechtlId": [
+            "m"
+        ],
+        "website": ""
+    },
+    {
+        "praxis": "Dr. Dannert",
+        "psychiaterNamen": [
+            "Hans Dannert", "Vanessa Alpert"
+        ],
+        "psychiaterAdresse": "Dorfackerstraße 15, 72072 Tübingen",
+        "praxisStadtteil": "Lustnau",
+        "karteIFRAME": "https://www.openstreetmap.org/export/embed.html?bbox=9.065737724304201%2C48.52365381673764%2C9.094920158386232%2C48.53774980941665&amp;layer=mapnik&amp;marker=48.5306888000247%2C9.08034310000005",
+        "psychiaterNummer": "07071 49375",
+        "telefonischeErreichbarkeit": [
+            "Mo-Fr: 08:30-12:30 Uhr", "Mo, Do: 16-18:30 Uhr"
+        ],
+        "kasse": "g",
+        "geschlechtlId": [
+            "m", "w"
+        ],
+        "website": ""
+    }
+];

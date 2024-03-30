@@ -402,3 +402,7 @@ body {
   clear: both;
 }
 
+.tabelleKarte {
+  width: 20vw;
+  height: 10vw;
+}
