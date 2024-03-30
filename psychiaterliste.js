@@ -61,6 +61,18 @@ function iframeGenerator(linkKarte) {
     return einbettung;
 }
 
+function psychKasse(namePsych, kassePsych) {
+    let ausgabe = namePsych;
+
+    if (kassePsych === 'p') {
+        ausgabe += '<br>(Privatpraxis)';
+    } else {
+        ausgabe += '<br>(Gesetzl. und Privatpatienten)'
+    }
+
+    return ausgabe;
+}
+
 // HTML
 
 let checkList1 = document.getElementById('dropdown-stadt');
@@ -222,7 +234,7 @@ formTest.addEventListener('submit', (e) => {
         table += `<tr><th>${praxisIcon} Praxis</th><th>${personIcon} Psychiater*innen</th><th>${telefonIconNeu} Nummer</th><th>${erreichbarkeitIconNeu} Erreichbarkeit</th><th>${adresseIcon} Adresse</th><th>${webIcon} Website</th><th>${karteIcon} Karte</th></tr>`
 
         datensatz.forEach(objekt => {
-            table += `<tr><td>${objekt.praxis}</td><td>${aufspaltenTable(objekt.psychiaterNamen)}</td><td>${objekt.psychiaterNummer}</td><td>${aufspaltenTable(objekt.telefonischeErreichbarkeit)}</td><td>${objekt.psychiaterAdresse} (${objekt.praxisStadtteil})<br><a href="${routenGenerator(adressFeld, objekt.psychiaterAdresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td><td>${iframeGenerator(objekt.karteIFRAME)}</td></<tr>`
+            table += `<tr><td>${psychKasse(objekt.praxis, objekt.kasse)}</td><td>${aufspaltenTable(objekt.psychiaterNamen)}</td><td>${objekt.psychiaterNummer}</td><td>${aufspaltenTable(objekt.telefonischeErreichbarkeit)}</td><td>${objekt.psychiaterAdresse} (${objekt.praxisStadtteil})<br><a href="${routenGenerator(adressFeld, objekt.psychiaterAdresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td><td>${iframeGenerator(objekt.karteIFRAME)}</td></<tr>`
         });
 
         table += '</table>'
