@@ -95,6 +95,27 @@ var items = document.getElementById('items');
             items.classList.remove('visible');
         }
 
+let checkList3 = document.getElementById('dropdown-sortierung');
+let items3 = document.getElementById('items3');
+        checkList3.getElementsByClassName('anchor')[0].onclick = function (evt) {
+            if (items3.classList.contains('visible')){
+                items3.classList.remove('visible');
+                items3.style.display = "none";
+            }
+            
+            else{
+                items3.classList.add('visible');
+                items3.style.display = "block";
+            }
+            
+            
+        }
+
+        items3.onblur = function(evt) {
+            items3.classList.remove('visible');
+        }
+
+
 
 // Präferenzen
 
@@ -106,6 +127,14 @@ formTest.addEventListener('submit', (e) => {
     let werte = {};
 
     document.querySelectorAll('[type="checkbox"]').forEach(item => {
+        if (item.checked === true) {
+            werte[item.value] = true;
+        } else if (item.checked === false) {
+            werte[item.value] = false;
+        }
+    })
+
+    document.querySelectorAll('[type="radio"]').forEach(item => {
         if (item.checked === true) {
             werte[item.value] = true;
         } else if (item.checked === false) {
@@ -207,9 +236,70 @@ formTest.addEventListener('submit', (e) => {
 
     //  --- Ende des Filterprozesses ---
 
-    let listeFertigPrae = psychiaterListeFilterStadtteile;
+    // Sortierungs-Parameter:
 
-    let listeFERTIG = duplikatElem(listeFertigPrae);
+    let sortKat;
+
+    if (werte.praxisname === true) {
+        sortKat = 'praxis'
+    } else if (werte.stadtteil === true) {
+        sortKat = 'praxisStadtteil';
+    } 
+
+    // console.log(sortKat)
+
+    // --- Sortierungsprozess ---
+
+    const quickSortZuweisung = (arr, kat) => {
+        if (arr.length <= 1) {
+          return arr;
+        }
+      
+        let pivot = arr[0][kat];
+        let leftArr = [];
+        let rightArr = [];
+      
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i][kat] < pivot) {
+            leftArr.push(arr[i][kat]);
+          } else {
+            rightArr.push(arr[i][kat]);
+          }
+        }
+      
+        return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
+      }; 
+
+    let sortierteListeKatZuweisung = duplikatElem(quickSortZuweisung(psychiaterListeFilterStadtteile, sortKat)); // HIER MUSS ALS ERSTER PARAMETER DER LETZTE DATENSATZ EIGEGEBEN WERDEN
+
+    function listeSortieren(liste, kat, zuweisung) {
+
+        if (liste.length === 1) {
+            return liste;
+        }
+
+        let ausgabeListe = [];
+
+        for (let eintragZuweisung of zuweisung) {
+            for (let eintragListe of liste) {
+                if ( eintragListe[kat] === eintragZuweisung) {
+                    ausgabeListe.push(eintragListe);
+                }
+            }
+        }
+
+        return ausgabeListe;
+    }
+
+    // --- Finaler Datensatz ---
+
+    let gefiltertUndSortiertPsychiater =  duplikatElem(listeSortieren(psychiaterListeFilterStadtteile, sortKat, sortierteListeKatZuweisung));
+
+    if (werte.absteigend === true) {
+        gefiltertUndSortiertPsychiater.reverse();
+    }
+
+    let listeFERTIG = gefiltertUndSortiertPsychiater;
 
     console.log(listeFERTIG);
 
