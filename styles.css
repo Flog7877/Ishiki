@@ -530,3 +530,64 @@ body {
   text-decoration: none;
   color: currentColor;
 }
+
+/* Timeline */
+
+.leitfaden {
+  display: flex;
+  justify-content: center;
+}
+
+.leitfaden > * {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline {
+  background: var(--primary-color);
+  margin: 20px auto;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Outer Layer with the timeline border */
+.outer {
+  border-left: 2px solid rgba(0, 110, 255, 0.719);
+}
+
+/* Card container */
+.card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: #64a7ff65;
+  color: currentColor;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Title of the card */
+.titleCard {
+  color: rgb(0, 102, 255);
+  position: relative;
+}
+
+/* Timeline dot  */
+.titleCard::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  left: -39px;
+  border: 3px solid rgb(0, 102, 255);
+}
