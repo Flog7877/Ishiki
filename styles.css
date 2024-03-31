@@ -504,3 +504,29 @@ body {
   list-style: none;
   padding-left: 0;
 }
+
+.hinzu {
+  padding-top: 2px;
+  padding-bottom: 0.7em;
+}
+
+.hinzu > h3 {
+  color: rgb(255, 0, 179);
+}
+
+.datenHinzu {
+  background-color: rgba(255, 40, 208, 0.199);
+}
+
+.datenListe li {
+  padding-bottom: 0.5em;
+}
+
+.datenListe:first-child {
+  padding-top: 0;
+}
+
+.mailAnMich {
+  text-decoration: none;
+  color: currentColor;
+}
