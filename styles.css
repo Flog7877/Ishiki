@@ -571,8 +571,9 @@ body {
 .info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1px;
 }
+
 
 /* Title of the card */
 .titleCard {
@@ -591,3 +592,4 @@ body {
   left: -39px;
   border: 3px solid rgb(0, 102, 255);
 }
+
