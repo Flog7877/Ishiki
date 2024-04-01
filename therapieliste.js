@@ -284,6 +284,30 @@ formTest.addEventListener('submit', (e) => {
         gefilterteListeStadt = gefilterteListeStadt.concat(teil);
     }
 
+    if (werte.west === true) {
+        let teil = gefilterteListeKasse.filter(obj => {
+            if (obj.stadtteil === 'Weststadt') {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeStadt = gefilterteListeStadt.concat(teil);
+    }
+
+    if (werte.oester === true) {
+        let teil = gefilterteListeKasse.filter(obj => {
+            if (obj.stadtteil === 'Österberg') {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeStadt = gefilterteListeStadt.concat(teil);
+    }
+
     // console.log(gefilterteListeStadt);
 
     // Therapieformen:
@@ -497,6 +521,10 @@ formTest.addEventListener('submit', (e) => {
     // Tabelle erstellen!
 
     function tabelleErstellen(datensatz) {
+
+        if (datensatz.length === 0) {
+            return notFoundIcon + ' Keine Ergebnisse gefunden';
+        }
 
         let table = '<table class="Therapeutentabelle">';
 

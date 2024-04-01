@@ -226,7 +226,152 @@ export const liste = [
         "avatar": "michaelaKunze",
         "therapeutenalter": nA
         // Spezifikationen: https://www.therapie.de/profil/michalea.kunze/
-    }
+    },
+    {
+        "therapeutenname": "Peter Wegner",
+        "seite": "peter_wegner",
+        "telefonnummer": "07071 43955",
+        "erreichbarkeit": [
+            "Montag-Freitag: 15-19 Uhr", "Dienstag-Freitag: 9-12 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Pfalzhaldenweg 16, 72070 Tübingen",
+        "stadtteil": "Weststadt", 
+        "website": "https://www.drpeterwegner.de/",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben", "Viele Veröffentlichungen (siehe Website)"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.009904861450197%2C48.50113756368663%2C9.06826972961426%2C48.52933815687993&amp;layer=mapnik&amp;marker=48.51521585004504%2C9.039075299999922",
+        "avatar": "peterWegner",
+        "therapeutenalter": nA
+    },
+    {
+        "therapeutenname": "Kerstin Zinser",
+        "seite": "kerstin_zinser",
+        "telefonnummer": "07071 6398596",
+        "erreichbarkeit": [
+            "Dienstag, Mittwoch: 7:30-8 Uhr", "Mittwoch: 12:50-13:30 Uhr", ab
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie", "Traumatherapie", "Systemische Therapie"
+        ],
+        "adresse": "Clinicumsgasse 22, 72020 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "https://psychotherapie-zinser.de/index.html",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Depressionen", "Seelische Reaktionen auf starke Belastungen", "Angststörungen", "Panikattacken", "Prüfungssängste", "Selbstwertprobleme", "Borderlinesyndrom", "Folgen psychotischer Krisen", "Persönlichkeitsstörungen"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.042005538940431%2C48.51282338332468%2C9.071187973022463%2C48.52692239027739&amp;layer=mapnik&amp;marker=48.5198636000247%2C9.056591400000002",
+        "avatar": "kerstinZinser",
+        "therapeutenalter": nA
+    },
+    {
+        "therapeutenname": "Joao Alves Nunes",
+        "seite": "alves_nunes",
+        "telefonnummer": "07071 551305",
+        "erreichbarkeit": [
+            "Montag: 16-16:50 Uhr", "Dienstag: 16-16:50 Uhr" 
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Gartenstr. 26, 72074 Tübingen",
+        "stadtteil": "Österberg", 
+        "website": "",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            nA
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.047970771789553%2C48.51168619563891%2C9.077153205871584%2C48.52578551905898&amp;layer=mapnik&amp;marker=48.518736347874544%2C9.062561988830566",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA
+    },
+    {
+        "therapeutenname": "Jessica Anders",
+        "seite": "jessica_anders",
+        "telefonnummer": "0152 28180862",
+        "erreichbarkeit": [
+            "Montag, Dienstag: 12-12:30 Uhr", "Donnerstag: 12-12:45 Uhr" 
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Friedrichstr. 5, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "p",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            nA
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.04479503631592%2C48.51089014907305%2C9.073977470397951%2C48.524989694021144&amp;layer=mapnik&amp;marker=48.517940412074374%2C9.059386253356934",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA
+    },
+    {
+        "therapeutenname": "Anja Assmann",
+        "seite": "anja_assmann",
+        "telefonnummer": "07071 8850020",
+        "erreichbarkeit": [
+            "Montag-Donnerstag: 14-14:30 Uhr" 
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Esslinger Straße 16, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            nA
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.040503501892092%2C48.505317472941066%2C9.069685935974123%2C48.519418568606945&amp;layer=mapnik&amp;marker=48.512368511313056%2C9.055094718933105",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA
+    },
+    {
+        "therapeutenname": "Jörg Assmann",
+        "seite": "joerg_assmann",
+        "telefonnummer": "07071 9796739",
+        "erreichbarkeit": [
+            "Montag-Mittwoch: 12-14:30 Uhr", "Donnerstag: 13-14:30 Uhr", "Freitag: 12-14:30 Uhr" 
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Hagellocher Weg 68, 72070 Tübingen",
+        "stadtteil": "Weststadt", 
+        "website": "",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            nA
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=8.998661041259767%2C48.51137346455092%2C9.05702590942383%2C48.53956836135791&amp;layer=mapnik&amp;marker=48.52547287499977%2C9.027843475341797",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA
+    } // Jetzt kommt Flora Busch
+    // https://www.arztsuche-bw.de/index.php?suchen=1&sorting=name&direction=ASC&arztgruppe=psychotherapeut&id_fachgruppe=483&geschlecht=alle&vorname=&nachname=&plz=&ort=T%C3%BCbingen&strasse=&landkreis=T%C3%BCbingen&wochentag=alle&zeiten=alle&id_praxis_zugang=&id_praxis_toilette=&id_sprache=&id_zusatzbezeichnung=&id_dmp=&id_genehmigung=&id_zusatzvertraege=&schluesselnr=&schluesseltyp=lanr7
 ];
 
 
