@@ -440,7 +440,7 @@ export const liste = [
             "Breites Behandlungsspektrum"
         ],
         "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.020977020263674%2C48.5095538999371%2C9.079341888427736%2C48.53774980941665&amp;layer=mapnik&amp;marker=48.52365381673764%2C9.050159454345703",
-        "avatar": "defaulticon",
+        "avatar": "defaultIcon",
         "therapeutenalter": nA,
         "weitereTherapeutInnen": [
             "Cara Maria Belizer", "Janna Theurer", "Jassen Halatsch", "Daniela Knauß", "Johannes Schönthal"
@@ -493,7 +493,7 @@ export const liste = [
             nA
         ],
         "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.029216766357424%2C48.49931763154031%2C9.087581634521486%2C48.5275192374508&amp;layer=mapnik&amp;marker=48.51342039664282%2C9.058399200439453",
-        "avatar": "defaulticon",
+        "avatar": "defaultIcon",
         "therapeutenalter": nA,
         "weitereTherapeutInnen": [
             "Katrin Bohlmann-Steeb", "Marianne Funk"
@@ -520,7 +520,7 @@ export const liste = [
             nA
         ],
         "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.045867919921877%2C48.5120842142321%2C9.075050354003908%2C48.52618342688841&amp;layer=mapnik&amp;marker=48.51913220002469%2C9.060465900000054",
-        "avatar": "defaulticon",
+        "avatar": "defaultIcon",
         "therapeutenalter": nA,
         "weitereTherapeutInnen": [
             "Sebastian Denoix", "Reinhold Ott"
