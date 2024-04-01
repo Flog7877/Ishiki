@@ -370,8 +370,55 @@ export const liste = [
         "karte": "https://www.openstreetmap.org/export/embed.html?bbox=8.998661041259767%2C48.51137346455092%2C9.05702590942383%2C48.53956836135791&amp;layer=mapnik&amp;marker=48.52547287499977%2C9.027843475341797",
         "avatar": "defaultIcon",
         "therapeutenalter": nA
-    } // Jetzt kommt Flora Busch
-    // https://www.arztsuche-bw.de/index.php?suchen=1&sorting=name&direction=ASC&arztgruppe=psychotherapeut&id_fachgruppe=483&geschlecht=alle&vorname=&nachname=&plz=&ort=T%C3%BCbingen&strasse=&landkreis=T%C3%BCbingen&wochentag=alle&zeiten=alle&id_praxis_zugang=&id_praxis_toilette=&id_sprache=&id_zusatzbezeichnung=&id_dmp=&id_genehmigung=&id_zusatzvertraege=&schluesselnr=&schluesseltyp=lanr7
+    },
+    {
+        "therapeutenname": "Flora Bach",
+        "seite": "flora_bach",
+        "telefonnummer": "0151 20772921",
+        "erreichbarkeit": [
+            "Montag: 8:30-9 Uhr", "Montag: 13-13:30 Uhr", "Dienstag: 9-9:50 Uhr" 
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Im Winkelrain 48 72076 Tübingen",
+        "stadtteil": "Schönblick/ Winkelwiese", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            nA
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.007930755615236%2C48.50875781987288%2C9.124660491943361%2C48.56513482934277&amp;layer=mapnik&amp;marker=48.53691000002036%2C9.06626254999992",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA
+    }, 
+    {
+        "therapeutenname": "Lena Behmenburg",
+        "seite": "lena_behmenburg",
+        "telefonnummer": "07071 8899058",
+        "erreichbarkeit": [
+            "Montag: 10-11:50 Uhr", "Mittwoch: 8:30-10 Uhr", 
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren"
+        ],
+        "adresse": "Gartenstraße 20 72074 Tübingen",
+        "stadtteil": "Österberg", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Depressionen", "Angstsörungen", "Zwangsstörungen", "Essstörungen", "Somatoforme Störungen", "Anpassungsstörungen", "Persönlichkeitsstörungen", "Psychoonkologie"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.032135009765627%2C48.504720364152135%2C9.09049987792969%2C48.53291896358166&amp;layer=mapnik&amp;marker=48.518821625968535%2C9.061317443847656",
+        "avatar": "lenaBehmenburg",
+        "therapeutenalter": nA
+    } 
 ];
 
 
