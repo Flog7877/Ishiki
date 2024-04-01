@@ -45,7 +45,7 @@ export function hatAlter(eintragAlter) {
         return notFoundIcon + ' ' + nA;
     }
 
-    return alterDesTherapeuten(eintragAlter) + 'Jahre';
+    return alterDesTherapeuten(eintragAlter) + ' Jahre';
 }
 
 export function duplikatElem(arr) {

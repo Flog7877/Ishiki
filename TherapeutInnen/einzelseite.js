@@ -157,3 +157,30 @@ spezifikationenHTML.innerHTML = listeGenerieren(datensatz);
 
 let avatarTher = document.getElementById('avaterDesT');
 avatarTher.innerHTML = `<img src="Bilder/${datensatz.avatar}.png" class="profilbild" id="profilbild">`;
+
+// Gemeinschaftspraxen
+
+function gemeinText(arr) {
+
+    if (arr.length <= 2) {
+        return '<h2>Behandelnde Therapeut*innen:</h2>' + arr[0] + ' und ' + arr[1];
+    }
+
+    let i = arr.length;
+
+    let satz = '<h2>Behandelnde Therapeut*innen:</h2>';
+
+    for (let j = 0; j < i-2; j++) {
+        satz += arr[j] + ', ';
+    }
+
+    return satz + arr[i-2] + ' und ' + arr[i-1] + '<br>';
+}
+
+let weitere = document.getElementById('weitereTherapeutInnen');
+
+if (datensatz.weitereTherapeutInnen.length !== 0) {
+
+    weitere.innerHTML = gemeinText(datensatz.weitereTherapeutInnen);
+
+};

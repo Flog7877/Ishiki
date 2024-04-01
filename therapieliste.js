@@ -200,9 +200,11 @@ formTest.addEventListener('submit', (e) => {
         let maennl = liste.filter(obj => {
             if (obj.geschlecht === 'm') {
                 return true;
-            } else {
-                return false;
+            } else if (obj.geschlecht === 'beides') {
+                return true;
             }
+
+            return false;
         })
 
         gefilterteListeGeschl = gefilterteListeGeschl.concat(maennl);
@@ -212,9 +214,11 @@ formTest.addEventListener('submit', (e) => {
         let weibl = liste.filter(obj => {
             if (obj.geschlecht === 'w') {
                 return true;
-            } else {
-                return false;
+            } else if (obj.geschlecht === 'beides') {
+                return true;
             }
+
+            return false;
         })
 
         gefilterteListeGeschl = gefilterteListeGeschl.concat(weibl);

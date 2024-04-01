@@ -418,7 +418,114 @@ export const liste = [
         "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.032135009765627%2C48.504720364152135%2C9.09049987792969%2C48.53291896358166&amp;layer=mapnik&amp;marker=48.518821625968535%2C9.061317443847656",
         "avatar": "lenaBehmenburg",
         "therapeutenalter": nA
-    } 
+    },
+    {
+        "therapeutenname": "Gemeinschaftspraxis Belizer",
+        "seite": "cara_belizer",
+        "telefonnummer": "07071 6399808",
+        "erreichbarkeit": [
+            ab
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Herrenberger Straße 11, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "",
+        "geschlecht": "beides",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Breites Behandlungsspektrum"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.020977020263674%2C48.5095538999371%2C9.079341888427736%2C48.53774980941665&amp;layer=mapnik&amp;marker=48.52365381673764%2C9.050159454345703",
+        "avatar": "defaulticon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+            "Cara Maria Belizer", "Janna Theurer", "Jassen Halatsch", "Daniela Knauß", "Johannes Schönthal"
+        ]
+    },
+    {
+        "therapeutenname": "Karin Böckh",
+        "seite": "karin_boeckh",
+        "telefonnummer": "07071 6394705",
+        "erreichbarkeit": [
+            "Dienstag: 12-12:50 Uhr", "Donnerstag: 12-12:50 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren"
+        ],
+        "adresse": "Haaggasse 15-2, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "https://www.karin-boeckh.de/index.php/startseite.html",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Klinische Therapie", "Suchttherapie", "Esstörungen", "<strong>Frauenorientierte Praxis</strong>"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.037241935729982%2C48.51330668036266%2C9.066424369812013%2C48.52740555281722&amp;layer=mapnik&amp;marker=48.520356607112134%2C9.051833152770996",
+        "avatar": "karinBoeckh",
+        "therapeutenalter": Date.UTC(1968, 1, 1),
+        "weitereTherapeutInnen": [
+        ]
+    },
+    {
+        "therapeutenname": "Katrin Bohlmann-Steeb",
+        "seite": "bohlmann_steeb",
+        "telefonnummer": "07071 36360",
+        "erreichbarkeit": [
+            "Montag: 09:30-10 Uhr", "Dienstag: 13:30-14 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Fürststraße 17, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            nA
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.029216766357424%2C48.49931763154031%2C9.087581634521486%2C48.5275192374508&amp;layer=mapnik&amp;marker=48.51342039664282%2C9.058399200439453",
+        "avatar": "defaulticon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+            "Katrin Bohlmann-Steeb", "Marianne Funk"
+        ]
+    },
+    {
+        "therapeutenname": "Sebastian Denoix",
+        "seite": "sebastian_denoix",
+        "telefonnummer": "07071 22792",
+        "erreichbarkeit": [
+            "Montag: 09:30-11:30 Uhr", "Dienstag: 9:30-11 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Gartenstraße 13, 72074 Tübingen",
+        "stadtteil": "Österberg", 
+        "website": "",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            nA
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.045867919921877%2C48.5120842142321%2C9.075050354003908%2C48.52618342688841&amp;layer=mapnik&amp;marker=48.51913220002469%2C9.060465900000054",
+        "avatar": "defaulticon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+            "Sebastian Denoix", "Reinhold Ott"
+        ]
+    } // Jetzt kommt Andrea Dolfen: https://www.arztsuche-bw.de/index.php?suchen=1&sorting=name&direction=ASC&arztgruppe=psychotherapeut&id_fachgruppe=483&geschlecht=alle&vorname=&nachname=&plz=&ort=T%C3%BCbingen&strasse=&landkreis=T%C3%BCbingen&wochentag=alle&zeiten=alle&id_praxis_zugang=&id_praxis_toilette=&id_sprache=&id_zusatzbezeichnung=&id_dmp=&id_genehmigung=&id_zusatzvertraege=&schluesselnr=&schluesseltyp=lanr7
 ];
 
 
