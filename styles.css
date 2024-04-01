@@ -598,3 +598,47 @@ body {
     width: 500px;
   }
 }
+
+.collapsible {
+  background-color: #669cff5b;
+  color: currentColor;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+}
+
+.active, .collapsible:hover {
+  background-color: #669cffab;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: left;
+  padding-right: 1em;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.contentC {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #669cff5b;
+}
+
+@media (max-width: 620px) {
+
+  .collapsible:after {
+    display: none;
+  }
+}
