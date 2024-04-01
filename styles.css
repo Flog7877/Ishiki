@@ -647,3 +647,7 @@ body {
     display: none;
   }
 }
+
+.linkInvis {
+  color: currentColor;
+}
