@@ -597,6 +597,11 @@ body {
   .infoblock {
     width: 500px;
   }
+
+  .datenHinzu {
+    width: 345px;
+    margin-right: 5%;
+  }
 }
 
 .collapsible {
