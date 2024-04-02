@@ -49,6 +49,10 @@ function jugendTherapeutinTest(arg) {
         return 'Ja';
     }
 
+    if (arg.jugendtherapeutInINK === true) {
+        return 'Behandelt auch jugendliche Patient*innen'
+    }
+
     return 'Nein';
 }
 
@@ -73,7 +77,7 @@ function hatAlter(eintragAlter) {
         return notFoundIcon + ' ' + nA;
     }
 
-    return alterDesTherapeuten(eintragAlter) + 'Jahre';
+    return alterDesTherapeuten(eintragAlter) + ' Jahre';
 }
 
 function webTest(str) {

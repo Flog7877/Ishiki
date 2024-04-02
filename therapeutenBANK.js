@@ -544,11 +544,12 @@ export const liste = [
         "jugendtherapeutIn": false,
         "kostenerstattungsverfahren": false,
         "spezifikationen": [
-            "Behandlung von Jugendlichen und Erwachsenen", "Schulische oder berufliche Leistungsprobleme", "Gesundheitliche Probleme", "Depressionen", "Angststörungen", "Zwangsstörungen", "Essstörungen", "Soziale Ängste"
+            "Schulische oder berufliche Leistungsprobleme", "Gesundheitliche Probleme", "Depressionen", "Angststörungen", "Zwangsstörungen", "Essstörungen", "Soziale Ängste"
         ],
         "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.01805877685547%2C48.509212724298095%2C9.076423645019533%2C48.537408823654594&amp;layer=mapnik&amp;marker=48.52331273604%2C9.0472412109375",
         "avatar": "defaultIcon",
         "therapeutenalter": nA,
+        "jugendtherapeutInINK": true,
         "weitereTherapeutInnen": [
             "Susanne Holzapfel", "Andrea Dolfen"
         ]
@@ -761,7 +762,112 @@ export const liste = [
         "therapeutenalter": nA,
         "weitereTherapeutInnen": [
         ]
-    },     
+    },
+    {
+        "therapeutenname": "Christina Gesser-Werning",
+        "seite": "gesser_werning",
+        "telefonnummer": "07071 793448",
+        "erreichbarkeit": [
+            "Dienstag: 13:55-15 Uhr", "Mittwoch: 7:30-8:15 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Holbeinweg 3, 72076 Tübingen",
+        "stadtteil": "Wanne", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=8.98509979248047%2C48.50898527259594%2C9.101829528808596%2C48.56536202891141&amp;layer=mapnik&amp;marker=48.53716535002523%2C9.043412750000016",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    {
+        "therapeutenname": "Lea Götz",
+        "seite": "lea_goetz",
+        "telefonnummer": "07071 9940322",
+        "erreichbarkeit": [
+            "Dienstag: 13-13:50 Uhr", "Donnerstag: 12-12:50 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Nauklerstraße 60, 72074 Tübingen",
+        "stadtteil": "Schönblick/ Winkelwiese", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.035139083862306%2C48.516092655754704%2C9.093503952026369%2C48.54428492597939&amp;layer=mapnik&amp;marker=48.53019310010949%2C9.064353449999999",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+        ]
+    }, 
+    {
+        "therapeutenname": "Allique Goudriaan",
+        "seite": "allique_goudriaan",
+        "telefonnummer": "07071 9910075",
+        "erreichbarkeit": [
+            "Dienstag: 13-14:30 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Neue Straße 11, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "https://www.psychotherapie-goudriaan.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Agoraphobie", "Spezifische Phobien", "Soziale Ängste", "PTBS", "Angststörung", "Depressionen", "Manie", "Bipolare Störung", "Arbeits- und Leistungsstörungen", "Akute Krisenbewältigung", "ADHS/ ADS", "Anoriexie", "Schizophrenie", "Schizoaffektive Störung", "Persönlichkeitsstörungen", "Mehr"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.02732849121094%2C48.50744994690329%2C9.085693359375002%2C48.53564702729531&amp;layer=mapnik&amp;marker=48.52152630002469%2C9.056491400000027",
+        "avatar": "alliqueGoudriaan",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": true,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    {
+        "therapeutenname": "Julia Graebe",
+        "seite": "julia_graebe",
+        "telefonnummer": "0176 37446365",
+        "erreichbarkeit": [
+            "Mittwoch: 15-16:40 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Gartenstraße 18, 72074 Tübingen",
+        "stadtteil": "Österberg", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.031877517700197%2C48.504720364152135%2C9.09024238586426%2C48.53291896358166&amp;layer=mapnik&amp;marker=48.518821625968535%2C9.061059951782227",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+        ]
+    }, 
 ];
 
 

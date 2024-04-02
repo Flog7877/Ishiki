@@ -178,7 +178,15 @@ formTest.addEventListener('submit', (e) => {
         }
     
         return satz;
-    }   
+    }  
+    
+    function inklJugend(obj) {
+        if (obj == true && werte.jugendT === true) {
+            return '<br>Behandelt auch jugendliche Patient*innen'
+        } 
+
+        return '';
+    }
 
     // Sortierungsparameter:
 
@@ -336,6 +344,18 @@ formTest.addEventListener('submit', (e) => {
         gefilterteListeStadt = gefilterteListeStadt.concat(teil);
     }
 
+    if (werte.wanne === true) {
+        let teil = gefilterteListeKasse.filter(obj => {
+            if (obj.stadtteil === 'Wanne') {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeStadt = gefilterteListeStadt.concat(teil);
+    }
+
     // console.log(gefilterteListeStadt);
 
     // Therapieformen:
@@ -454,10 +474,12 @@ formTest.addEventListener('submit', (e) => {
 
     let gefilterteListeJugend = [];
 
-    if (werte.jugendT === false) {
+    if (werte.jugendT === true) {
         let erwachsen = gefilterteListeAlter.filter(obj => {
-            if (obj.jugendtherapeutIn === false){    
+            if (obj.jugendtherapeutIn === true){    
                 return true;            
+            } else if(obj.jugendtherapeutInINK === true) {
+                return true;
             } else {
                 return false;
             }
@@ -467,6 +489,8 @@ formTest.addEventListener('submit', (e) => {
     } else {
         gefilterteListeJugend = gefilterteListeAlter;
     }
+
+
 
     //// HIER ENDE FILTERN
 
@@ -561,7 +585,7 @@ formTest.addEventListener('submit', (e) => {
         datensatz.forEach(objekt =>{
             //table += '<tr><td>'+ objekt.therapeutenname + '</td><td>' + objekt.telefonnummer + '</td><td>' + objekt.erreichbarkeit + '</td><td>' + objekt.adresse + '</td><td><a href="'+ objekt.website + '" target="_blank">Website</a></td></tr>';
             //table += `<tr><td>${objekt.therapeutenname}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td></tr>`;
-            table += `<tr><td>${linkName(objekt.seite, objekt.therapeutenname)}<br>${kassenArt(objekt.kasse, objekt.jugendtherapeutIn, objekt.kostenerstattungsverfahren)}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td><td>${hatAlter(objekt.therapeutenalter)}</td></tr>`;
+            table += `<tr><td>${linkName(objekt.seite, objekt.therapeutenname)}<br>${kassenArt(objekt.kasse, objekt.jugendtherapeutIn, objekt.kostenerstattungsverfahren)}${inklJugend(objekt.jugendtherapeutInINK)}</td><td>${objekt.telefonnummer}</td><td>${aufspalten(objekt.erreichbarkeit)}</td><td>${aufspalten(objekt.therapieformen)}</td><td>${objekt.adresse} (${objekt.stadtteil})<br><a href="${routenGenerator(adressFeld, objekt.adresse)}" target="_blank">Wegbeschreibung</a></td><td>${webTest(objekt.website)}</td><td>${hatAlter(objekt.therapeutenalter)}</td></tr>`;
         });
 
         table += '</table>';
