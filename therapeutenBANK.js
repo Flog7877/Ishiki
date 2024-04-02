@@ -1155,7 +1155,117 @@ export let listeMAP = {
         "jugendtherapeutInINK": false,
         "weitereTherapeutInnen": [
         ]
-    },                     
+    },
+    "detlef_hielscher": {
+        "therapeutenname": "Detlef Hielscher",
+        "seite": "detlef_hielscher",
+        "telefonnummer": "07071 538108",
+        "erreichbarkeit": [
+            "Montag: 12-12:50 Uhr", "Dienstag: 12:30-12:55 Uhr", "Mittwoch: 19-19:25 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Aixerstraße 5, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "https://www.detlef-hielscher.de/39994.html",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Angststörungen", "Depressionen"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.015655517578127%2C48.48339043800989%2C9.132385253906252%2C48.53979567575707&amp;layer=mapnik&amp;marker=48.5115603001764%2C9.074093299999959",
+        "avatar": "detlefHielscher",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": true,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "ines_riessen": {
+        "therapeutenname": "Ines Riessen",
+        "seite": "ines_riessen",
+        "telefonnummer": "07071 9988892",
+        "erreichbarkeit": [
+            ab
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Gartenstraße 20, 72074 Tübingen",
+        "stadtteil": "Österberg", 
+        "website": "https://www.psychotherapie-riessen.de/index.html",
+        "geschlecht": "beides",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Somatoforme Störungen", "Schmerzstörungen", "Essstörungen", "Angststörungen", "Depressionen", "Frauenheilkunde: Psychosomatische Störungen", "Psychiatrische Störungen", "Krisenintervention"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.032135009765627%2C48.504663496281516%2C9.09049987792969%2C48.53286212735784&amp;layer=mapnik&amp;marker=48.518788450031465%2C9.061327300000016",
+        "avatar": "inesRiessen",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+            "Ines Riessen", "Jan Hirn"
+        ]
+    },
+    "michael_hittinger": {
+        "therapeutenname": "Michael Hittinger",
+        "seite": "michael_hittinger",
+        "telefonnummer": "07071 256660",
+        "erreichbarkeit": [
+            "Montag: 14-19 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Lazarettgasse 7, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.023466110229494%2C48.508530366128944%2C9.081830978393556%2C48.53672684524023&amp;layer=mapnik&amp;marker=48.52260475004202%2C9.052644200000032",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "marlene_jauss": {
+        "therapeutenname": "Marlene Jauß",
+        "seite": "marlene_jauss",
+        "telefonnummer": "07071 52199",
+        "erreichbarkeit": [
+            "Dienstag-Freitag: 13-14 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Fürststraße 11, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "https://www.psychotherapiejauss.de/#home",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Depressionen", "Burnout und Stress", "Ängste und Panikprobleme", "Soziale Unsicherheiten", "Chronische Schmerzzustände", "Schlafstörungen", "Familiäre Konflikte", "Sinnkrisen", "Trennung, Tod und Verlust", "Belastungsreaktionen", "Zwänge", "Rückkehr in den Alltag nach einem psychiatrischen Aufenthalt"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.029645919799806%2C48.500227605781035%2C9.088010787963869%2C48.52842870533195&amp;layer=mapnik&amp;marker=48.514313600024686%2C9.058805800000073",
+        "avatar": "defaultIcon",
+        "therapeutenalter": Date.UTC(1961, 1, 1),
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },    
+    // Dr. Martin Jung / https://www.arztsuche-bw.de/index.php?suchen=1&offset=40&id_z_arzt_praxis=0&id_fachgruppe=483&id_zusatzbezeichnung=0&id_genehmigung=0&id_dmp=0&id_zusatzvertraege=0&id_sprache=0&vorname=&nachname=&arztgruppe=psychotherapeut&geschlecht=alle&wochentag=alle&zeiten=alle&fa_name=&plz=&ort=T%C3%BCbingen&strasse=&schluesselnr=&schluesseltyp=lanr7&landkreis=T%C3%BCbingen&id_leistungsort_art=0&id_praxis_zusatz=0&sorting=name&direction=ASC&checkbox_content=&name_schnellsuche=&fachgebiet_schnellsuche=
 }
 
 

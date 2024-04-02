@@ -659,3 +659,21 @@ body {
 .weitereTherapeutInnen h2 {
   font-size: 1.3em;
 }
+
+.alleStadt, .alleForm {
+  background-color: rgba(100, 148, 237, 0.212);
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.alleStadt:hover, .alleForm:hover {
+  background-color: rgba(100, 148, 237, 0.5);
+}
+
+.alleStadt:active, .alleForm:active {
+  background-color: rgba(100, 148, 237, 0.89);
+}

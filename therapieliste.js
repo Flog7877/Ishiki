@@ -137,6 +137,55 @@ let items3 = document.getElementById('items3');
 
 // Hier beginnt der querySelector für die HTML-form
 
+const alleAuswaehlenS = document.getElementsByClassName('alleStadt');
+
+const stadtteilAuswahl = document.getElementsByClassName('stadtteilAuswahl');
+
+let j = 1;
+
+function toggleStatusS() {
+    if (j % 2 === 0) {
+        for (let knopf of stadtteilAuswahl) {
+            knopf.checked = true;
+        }
+        j++;
+
+    } else {
+        for (let knopf of stadtteilAuswahl) {
+            knopf.checked = false;
+        }
+        j++;
+    }
+}
+
+for (let button1 of alleAuswaehlenS) {
+    button1.addEventListener('click', toggleStatusS);
+}
+
+const alleAuswaehlenF = document.getElementsByClassName('alleForm');
+const formAuswahl = document.getElementsByClassName('formAuswahl');
+
+let p = 1;
+
+function toggleStatusF() {
+    if (p % 2 === 0) {
+        for (let knop of formAuswahl) {
+            knop.checked = true;
+        }
+        p++;
+    } else {
+        for (let knopf of formAuswahl) {
+            knopf.checked = false;
+        }
+        p++;
+    }
+}
+
+for (let button2 of alleAuswaehlenF) {
+    button2.addEventListener('click', toggleStatusF);
+}
+
+
 const formTest = document.querySelector('form');
 
 formTest.addEventListener('submit', (e) => {
