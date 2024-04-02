@@ -1,6 +1,14 @@
 let ab = "Anfrage per Mailbox", nA = "k.A.";
 
-import { liste } from "./therapeutenBANK.js";
+// import { liste } from "./therapeutenBANK.js";
+
+import { listeMAP } from "./therapeutenBANK.js";
+
+let liste = [];
+
+Object.values(listeMAP).forEach(item => {
+    liste.push(item);
+})
 
 // console.log(liste)
 
@@ -59,7 +67,7 @@ function istTherapieform(arr, therapieform) {
 }
 
 function linkName(seite, therapeutenName) {
-    return `<a href="TherapeutInnen/${seite}.html" target="_blank">${therapeutenName}</a>`;
+    return `<a href="TherapeutInnen/therapeutIn.html?name=${seite}" target="_blank">${therapeutenName}</a>`;
 }
 
 function nameInfo() {

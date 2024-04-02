@@ -1,15 +1,26 @@
 let ab = "Anfrage per Mailbox", nA = "k.A.";
 let notFoundIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-x"><path d="m13.5 8.5-5 5"/><path d="m8.5 8.5 5 5"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>';
 
+const querryString = window.location.search;
 
-import { liste } from "../therapeutenBANK.js";
+const urlParameter = new URLSearchParams(querryString);
+
+const nameT = urlParameter.get('name');
+
+
+import { listeMAP } from "../therapeutenBANK.js";
 
 //console.log(liste);
 
-let nameT = document.getElementById('NameDesTherapeuten').innerText;
+let liste = [];
+
+Object.values(listeMAP).forEach(item => {
+    liste.push(item);
+})
+
 
 let datenT = liste.filter(obj => {
-    if (obj.therapeutenname === nameT) {
+    if (obj.seite === nameT) {
         return true;
     }
 
@@ -94,6 +105,9 @@ function webTest(str) {
 let datensatz = datenT[0];
 
 console.log(datensatz);
+
+let nameDisplay = document.getElementById('NameDesTherapeuten');
+nameDisplay.innerText = datensatz.therapeutenname;
 
 let altT = document.getElementById('alterTher');
 altT.innerHTML = hatAlter(datensatz.therapeutenalter);
