@@ -324,6 +324,18 @@ formTest.addEventListener('submit', (e) => {
         gefilterteListeStadt = gefilterteListeStadt.concat(teil);
     }
 
+    if (werte.derendingen === true) {
+        let teil = gefilterteListeKasse.filter(obj => {
+            if (obj.stadtteil === 'Derendingen') {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeStadt = gefilterteListeStadt.concat(teil);
+    }
+
     // console.log(gefilterteListeStadt);
 
     // Therapieformen:

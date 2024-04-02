@@ -735,8 +735,33 @@ export const liste = [
         "therapeutenalter": Date.UTC(1958, 1, 1),
         "weitereTherapeutInnen": [
         ]
+    },
+    {
+        "therapeutenname": "Astrid Gerrards",
+        "seite": "astrid_gerrards",
+        "telefonnummer": "07071 885766",
+        "erreichbarkeit": [
+            "Montag-Freitag: 7-7:30 Uhr", "Montag: 19-19:50 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Primus-Truber-Straße 62, 72072 Tübingen",
+        "stadtteil": "Derendingen", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.026899337768556%2C48.489249951591724%2C9.085264205932619%2C48.5174571592373&amp;layer=mapnik&amp;marker=48.503360900117215%2C9.056121549999943",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+        ]
     },     
-    // Jetzt kommt Astrid Gerrards:   https://www.arztsuche-bw.de/index.php?suchen=1&offset=20&id_z_arzt_praxis=0&id_fachgruppe=483&id_zusatzbezeichnung=0&id_genehmigung=0&id_dmp=0&id_zusatzvertraege=0&id_sprache=0&vorname=&nachname=&arztgruppe=psychotherapeut&geschlecht=alle&wochentag=alle&zeiten=alle&fa_name=&plz=&ort=T%C3%BCbingen&strasse=&schluesselnr=&schluesseltyp=lanr7&landkreis=T%C3%BCbingen&id_leistungsort_art=0&id_praxis_zusatz=&sorting=name&direction=ASC&checkbox_content=&name_schnellsuche=&fachgebiet_schnellsuche=           
 ];
 
 
