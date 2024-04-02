@@ -109,6 +109,9 @@ console.log(datensatz);
 let nameDisplay = document.getElementById('NameDesTherapeuten');
 nameDisplay.innerText = datensatz.therapeutenname;
 
+let nameDisplay2 = document.getElementById('NameDesTherapeuten2');
+nameDisplay2.innerText = datensatz.therapeutenname;
+
 let altT = document.getElementById('alterTher');
 altT.innerHTML = hatAlter(datensatz.therapeutenalter);
 
@@ -174,7 +177,8 @@ spezifikationenHTML.innerHTML = listeGenerieren(datensatz);
 
 
 let avatarTher = document.getElementById('avaterDesT');
-avatarTher.innerHTML = `<img src="Bilder/${datensatz.avatar}.png" class="profilbild" id="profilbild">`;
+// avatarTher.innerHTML = `<img src="Bilder/${datensatz.avatar}.png" class="profilbild" id="profilbild">`; // SO WAR ES EIGENTLICH
+avatarTher.innerHTML = `<img src="Bilder/defaultIcon.png" class="profilbild" id="profilbild">`;
 
 // Gemeinschaftspraxen
 

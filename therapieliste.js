@@ -364,6 +364,18 @@ formTest.addEventListener('submit', (e) => {
         gefilterteListeStadt = gefilterteListeStadt.concat(teil);
     }
 
+    if (werte.lustnau === true) {
+        let teil = gefilterteListeKasse.filter(obj => {
+            if (obj.stadtteil === 'Lustnau') {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeStadt = gefilterteListeStadt.concat(teil);
+    }
+
     // console.log(gefilterteListeStadt);
 
     // Therapieformen:
