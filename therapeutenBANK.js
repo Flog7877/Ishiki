@@ -525,7 +525,218 @@ export const liste = [
         "weitereTherapeutInnen": [
             "Sebastian Denoix", "Reinhold Ott"
         ]
-    } // Jetzt kommt Andrea Dolfen: https://www.arztsuche-bw.de/index.php?suchen=1&sorting=name&direction=ASC&arztgruppe=psychotherapeut&id_fachgruppe=483&geschlecht=alle&vorname=&nachname=&plz=&ort=T%C3%BCbingen&strasse=&landkreis=T%C3%BCbingen&wochentag=alle&zeiten=alle&id_praxis_zugang=&id_praxis_toilette=&id_sprache=&id_zusatzbezeichnung=&id_dmp=&id_genehmigung=&id_zusatzvertraege=&schluesselnr=&schluesseltyp=lanr7
+    },
+    {
+        "therapeutenname": "Susanne Holzapfel",
+        "seite": "susanne_holzapfel",
+        "telefonnummer": "07071 9988891",
+        "erreichbarkeit": [
+            ab
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Rappstraße 46, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "http://susanneholzapfel.de/index.htm",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Behandlung von Jugendlichen und Erwachsenen", "Schulische oder berufliche Leistungsprobleme", "Gesundheitliche Probleme", "Depressionen", "Angststörungen", "Zwangsstörungen", "Essstörungen", "Soziale Ängste"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.01805877685547%2C48.509212724298095%2C9.076423645019533%2C48.537408823654594&amp;layer=mapnik&amp;marker=48.52331273604%2C9.0472412109375",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+            "Susanne Holzapfel", "Andrea Dolfen"
+        ]
+    },
+    {
+        "therapeutenname": "Brigitte Ebersprächer",
+        "seite": "brigitte_ebersprächer",
+        "telefonnummer": "07071 44440",
+        "erreichbarkeit": [
+            "Dienstag: 8-9:40 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie", "Tiefenpsychologisches Verfahren"
+        ],
+        "adresse": "Breuningstraße 15, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.038829803466799%2C48.50599987437152%2C9.06801223754883%2C48.52010078015159&amp;layer=mapnik&amp;marker=48.51304705003582%2C9.053421249999928",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    {
+        "therapeutenname": "Kristina Ehrlinger",
+        "seite": "kristina_ehrlinger",
+        "telefonnummer": "07071 538898",
+        "erreichbarkeit": [
+            "Dienstag: 7-7:40 Uhr", "Mittwoch: 12:30-13 Uhr", "Freitag: 9-9:30 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Aixerstraße 32, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.016685485839846%2C48.48248016155762%2C9.13341522216797%2C48.53888641203577&amp;layer=mapnik&amp;marker=48.5106911354775%2C9.075050354003906",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    {
+        "therapeutenname": "Friederike Gundel und Kolleginnen",
+        "seite": "friederike_gundel",
+        "telefonnummer": "07071 7772100",
+        "erreichbarkeit": [
+            "Mittwoch: 14:15-17:35 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie", "Traumatherapie"
+        ],
+        "adresse": "Wilhelmstraße 105, 72074 Tübingen",
+        "stadtteil": "Schönblick/ Winkelwiese", 
+        "website": "https://www.psychotherapie-gundel.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Ängste", "Depressionen", "Burn-Out", "Somatisierung", "Essstörungen", "Sucht", "Borderline-Persönlichkeitsstörung", "Online-Therapie möglich"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.04080390930176%2C48.51671805774626%2C9.099168777465822%2C48.544909979873715&amp;layer=mapnik&amp;marker=48.530793900269835%2C9.069958250000013",
+        "avatar": "friederikeGundel",
+        "therapeutenalter": Date.UTC(1967, 1, 1),
+        "weitereTherapeutInnen": [
+            "Jennifer Fehr", "Friederike Gundel", "Lisa Raab", "Ellen Brölz"
+        ]
+    },
+    {
+        "therapeutenname": "Martina Fischer",
+        "seite": "martina_fischer",
+        "telefonnummer": "07071 253322",
+        "erreichbarkeit": [
+            "Dienstag, Mittwoch: 8:35-9 Uhr", "Dienstag, Freitag: 11:50-12:20 Uhr", "Mittwoch: 12:50-13:20 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Schwärzlocher Straße 40, 72070 Tübingen",
+        "stadtteil": "Weststadt", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.012479782104494%2C48.50528903934874%2C9.070844650268556%2C48.53348732231063&amp;layer=mapnik&amp;marker=48.51936620005101%2C9.041647399999988",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    {
+        "therapeutenname": "Elsbeth Freudenfeld",
+        "seite": "elsbeth_freudenfeld",
+        "telefonnummer": "07071 252797",
+        "erreichbarkeit": [
+            "Dienstag, Mittwoch: 8:35-9 Uhr", "Dienstag, Freitag: 11:50-12:20 Uhr", "Mittwoch: 12:50-13:20 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Gartenstraße 18, 72074 Tübingen",
+        "stadtteil": "Österberg", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.031877517700197%2C48.50477723195894%2C9.09024238586426%2C48.532975799741635&amp;layer=mapnik&amp;marker=48.51885770007148%2C9.061039199999982",
+        "avatar": "elsbethFreudenfeld",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    {
+        "therapeutenname": "Monika Gaiser-Maucher",
+        "seite": "gaier_maucher",
+        "telefonnummer": "07071 6890270",
+        "erreichbarkeit": [
+            "Dienstag-Donnerstag: 7:45-8:15 Uhr", "Montag, Freitag: 12-13 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Münzgasse 18, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.047498703002931%2C48.51616372455163%2C9.062089920043947%2C48.52321325373719&amp;layer=mapnik&amp;marker=48.519688800072316%2C9.054799799999955",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    {
+        "therapeutenname": "Ursula Gangl",
+        "seite": "ursula_gangl",
+        "telefonnummer": "07071 9497517",
+        "erreichbarkeit": [
+            "Dienstag-Donnerstag: 13-13:40 Uhr", "Montag, Freitag: 14-14:40 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Konrad-Adenauer-Str. 5, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "https://www.psychotherapie-gangl.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Angststörung", "Depressionen", "Anpassungs- und Belastungsstörungen", "Selbstwertprobleme", "Missbrauchsfolgen", "Persönlichkeitsstörung", "Psychosomatische Erkrankungen", "Psychosen", "Essstörungen"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.02183532714844%2C48.4976682615933%2C9.080200195312502%2C48.525870785285605&amp;layer=mapnik&amp;marker=48.511753350680195%2C9.051027250000061",
+        "avatar": "usrsulaGangl",
+        "therapeutenalter": Date.UTC(1958, 1, 1),
+        "weitereTherapeutInnen": [
+        ]
+    },     
+    // Jetzt kommt Astrid Gerrards:   https://www.arztsuche-bw.de/index.php?suchen=1&offset=20&id_z_arzt_praxis=0&id_fachgruppe=483&id_zusatzbezeichnung=0&id_genehmigung=0&id_dmp=0&id_zusatzvertraege=0&id_sprache=0&vorname=&nachname=&arztgruppe=psychotherapeut&geschlecht=alle&wochentag=alle&zeiten=alle&fa_name=&plz=&ort=T%C3%BCbingen&strasse=&schluesselnr=&schluesseltyp=lanr7&landkreis=T%C3%BCbingen&id_leistungsort_art=0&id_praxis_zusatz=&sorting=name&direction=ASC&checkbox_content=&name_schnellsuche=&fachgebiet_schnellsuche=           
 ];
 
 

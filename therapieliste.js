@@ -513,7 +513,7 @@ formTest.addEventListener('submit', (e) => {
 
     console.log(gefiltertUndSortiert);
 
-    let listeFILTERED = gefiltertUndSortiert; // Über diese Variable wird die Tabelle iteriert
+    let listeFILTERED = duplikatElem(gefiltertUndSortiert); // Über diese Variable wird die Tabelle iteriert
 
     //// Adressfeld
 
