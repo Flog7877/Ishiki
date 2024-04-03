@@ -115,6 +115,30 @@ let items3 = document.getElementById('items3');
             items3.classList.remove('visible');
         }
 
+        const alleAuswaehlenS = document.getElementsByClassName('alleStadt');
+
+        const stadtteilAuswahl = document.getElementsByClassName('stadtteilAuswahl');
+        
+        let j = 1;
+        
+        function toggleStatusS() {
+            if (j % 2 === 0) {
+                for (let knopf of stadtteilAuswahl) {
+                    knopf.checked = true;
+                }
+                j++;
+        
+            } else {
+                for (let knopf of stadtteilAuswahl) {
+                    knopf.checked = false;
+                }
+                j++;
+            }
+        }
+        
+        for (let button1 of alleAuswaehlenS) {
+            button1.addEventListener('click', toggleStatusS);
+        }
 
 
 // Präferenzen
@@ -220,6 +244,90 @@ formTest.addEventListener('submit', (e) => {
         })
 
         psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teilSued);
+    }
+
+    if (werte.west === true) {
+        let teil = psychiaterListeFilterKasse.filter(obj => {
+            if (obj.praxisStadtteil === 'Weststadt') {
+                return true;
+            } else {
+                return false; 
+            }
+        })
+
+        psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teil);
+    }
+
+    if (werte.oester === true) {
+        let teil = psychiaterListeFilterKasse.filter(obj => {
+            if (obj.praxisStadtteil === 'Österberg') {
+                return true;
+            } else {
+                return false; 
+            }
+        })
+
+        psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teil);
+    }
+
+    if (werte.winkel === true) {
+        let teil = psychiaterListeFilterKasse.filter(obj => {
+            if (obj.praxisStadtteil === 'Schönblick/ Winkelwiese') {
+                return true;
+            } else {
+                return false; 
+            }
+        })
+
+        psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teil);
+    }
+
+    if (werte.derendingen === true) {
+        let teil = psychiaterListeFilterKasse.filter(obj => {
+            if (obj.praxisStadtteil === 'Derendingen') {
+                return true;
+            } else {
+                return false; 
+            }
+        })
+
+        psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teil);
+    }
+
+    if (werte.wanne === true) {
+        let teil = psychiaterListeFilterKasse.filter(obj => {
+            if (obj.praxisStadtteil === 'Wanne') {
+                return true;
+            } else {
+                return false; 
+            }
+        })
+
+        psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teil);
+    }
+
+    if (werte.franz === true) {
+        let teil = psychiaterListeFilterKasse.filter(obj => {
+            if (obj.praxisStadtteil === 'Französisches Viertel') {
+                return true;
+            } else {
+                return false; 
+            }
+        })
+
+        psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teil);
+    }
+
+    if (werte.garten === true) {
+        let teil = psychiaterListeFilterKasse.filter(obj => {
+            if (obj.praxisStadtteil === 'Gartenstraße') {
+                return true;
+            } else {
+                return false; 
+            }
+        })
+
+        psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teil);
     }
 
     if (werte.lustnau === true) {

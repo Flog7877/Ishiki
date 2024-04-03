@@ -1727,7 +1727,8 @@ export let listeMAP = {
         "weitereTherapeutInnen": [
         ]
     },
-                    
+    // Bei Arztsuche: Christiane Kiviet; https://www.arztsuche-bw.de/index.php?suchen=1&offset=60&id_z_arzt_praxis=0&id_fachgruppe=483&id_zusatzbezeichnung=0&id_genehmigung=0&id_dmp=0&id_zusatzvertraege=0&id_sprache=0&vorname=&nachname=&arztgruppe=psychotherapeut&geschlecht=alle&wochentag=alle&zeiten=alle&fa_name=&plz=&ort=T%C3%BCbingen&strasse=&schluesselnr=&schluesseltyp=lanr7&landkreis=T%C3%BCbingen&id_leistungsort_art=0&id_praxis_zusatz=0&sorting=name&direction=ASC&checkbox_content=&name_schnellsuche=&fachgebiet_schnellsuche=
+    //
 }
 
 
@@ -1735,7 +1736,7 @@ export const listePsychiater = [
     {
         "praxis": "Gemeinschaftspraxis Mayer und Pape",
         "psychiaterNamen": [
-            "Bernhard Mayer", "Christian Pape"
+            "Bernhard Mayer", "Christian Pape", "Matthias Fischer", "Kathrin Schmidts"
         ],
         "psychiaterAdresse": "Am Markt 13, 72072 Tübingen",
         "praxisStadtteil": "Zentrum",
@@ -1746,7 +1747,7 @@ export const listePsychiater = [
         ],
         "kasse": "g",
         "geschlechtlId": [
-            "m"
+            "m", "w"
         ],
         "website": ""
     },
@@ -1767,7 +1768,79 @@ export const listePsychiater = [
             "m", "w"
         ],
         "website": ""
-    }
+    },
+    {
+        "praxis": "Dr. Heide",
+        "psychiaterNamen": [
+            "Klaus Heide"
+        ],
+        "psychiaterAdresse": "Eisenbahnstraße 1, 72072 Tübingen",
+        "praxisStadtteil": "Südstadt",
+        "karteIFRAME": "https://www.openstreetmap.org/export/embed.html?bbox=9.034366607666017%2C48.50204750525715%2C9.09273147583008%2C48.53024759209485&amp;layer=mapnik&amp;marker=48.51614951080023%2C9.063549041748047",
+        "psychiaterNummer": "07071 60960",
+        "telefonischeErreichbarkeit": [
+            "Mo-Fr: 9-18 Uhr"
+        ],
+        "kasse": "g",
+        "geschlechtlId": [
+            "m"
+        ],
+        "website": ""
+    }, 
+    {
+        "praxis": "Dr. Neussel",
+        "psychiaterNamen": [
+            "Corinna Neussel"
+        ],
+        "psychiaterAdresse": "Karlstraße 8, 72072 Tübingen",
+        "praxisStadtteil": "Südstadt",
+        "karteIFRAME": "https://www.openstreetmap.org/export/embed.html?bbox=9.050889015197756%2C48.5135198981786%2C9.065480232238771%2C48.52056979525894&amp;layer=mapnik&amp;marker=48.51703790002466%2C9.058186699999965",
+        "psychiaterNummer": "07071 5654000",
+        "telefonischeErreichbarkeit": [
+            "Mo: 8:35-9 Uhr", "Di-Do: 8-9 Uhr"
+        ],
+        "kasse": "g",
+        "geschlechtlId": [
+            "w"
+        ],
+        "website": ""
+    },
+    {
+        "praxis": "Dr. Char",
+        "psychiaterNamen": [
+            "Eva Char"
+        ],
+        "psychiaterAdresse": "Mühlstraße 20, 72074 Tübingen",
+        "praxisStadtteil": "Zentrum",
+        "karteIFRAME": "https://www.openstreetmap.org/export/embed.html?bbox=9.043207168579103%2C48.51418797485823%2C9.072389602661135%2C48.528286602052155&amp;layer=mapnik&amp;marker=48.52122750002467%2C9.05781669999999",
+        "psychiaterNummer": "07071 2536986",
+        "telefonischeErreichbarkeit": [
+            "Mo-Mi, Fr: 8:30-12:30 Uhr", "Mo, Mi, Fr: 13:30-16 Uhr"
+        ],
+        "kasse": "g",
+        "geschlechtlId": [
+            "w"
+        ],
+        "website": ""
+    },
+    {
+        "praxis": "Dr. Wettach",
+        "psychiaterNamen": [
+            "Irmtraud Wettach"
+        ],
+        "psychiaterAdresse": "Konrad-Adenauer-Straße 5, 72072 Tübingen",
+        "praxisStadtteil": "Südstadt",
+        "karteIFRAME": "https://www.openstreetmap.org/export/embed.html?bbox=9.036469459533693%2C48.504720364152135%2C9.065651893615724%2C48.518821625968535&amp;layer=mapnik&amp;marker=48.51177148560064%2C9.051060676574707",
+        "psychiaterNummer": "07071 1473073",
+        "telefonischeErreichbarkeit": [
+            "Di: 9-13 Uhr", "Mi: 9-12 und 15-18 Uhr", "Do: 8-11 Uhr"
+        ],
+        "kasse": "g",
+        "geschlechtlId": [
+            "w"
+        ],
+        "website": ""
+    },
 ];
 
 // Testing --- Experimentell

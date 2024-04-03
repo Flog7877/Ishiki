@@ -581,7 +581,14 @@ formTest.addEventListener('submit', (e) => {
 
         gefilterteListeJugend = gefilterteListeJugend.concat(erwachsen);
     } else {
-        gefilterteListeJugend = gefilterteListeAlter;
+        let jug = gefilterteListeAlter.filter(obj => {
+            if (obj.jugendtherapeutIn === false) {
+                return true;
+            }
+            return false;
+        })
+
+        gefilterteListeJugend = gefilterteListeJugend.concat(jug);
     }
 
 
