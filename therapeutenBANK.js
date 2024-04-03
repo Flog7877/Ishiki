@@ -284,8 +284,8 @@ export let listeMAP = {
         "therapieformen": [
             "Tiefenpsychologisches Verfahren", "Psychoanalyse"
         ],
-        "adresse": "Gartenstr. 26, 72074 Tübingen",
-        "stadtteil": "Österberg", 
+        "adresse": "Gartenstraße 26, 72074 Tübingen",
+        "stadtteil": "Gartenstraße", 
         "website": "",
         "geschlecht": "m",
         "kasse": "g",
@@ -405,7 +405,7 @@ export let listeMAP = {
             "Tiefenpsychologisches Verfahren"
         ],
         "adresse": "Gartenstraße 20 72074 Tübingen",
-        "stadtteil": "Österberg", 
+        "stadtteil": "Gartenstraße", 
         "website": "",
         "geschlecht": "w",
         "kasse": "g",
@@ -509,7 +509,7 @@ export let listeMAP = {
             "Tiefenpsychologisches Verfahren", "Psychoanalyse"
         ],
         "adresse": "Gartenstraße 13, 72074 Tübingen",
-        "stadtteil": "Österberg", 
+        "stadtteil": "Gartenstraße", 
         "website": "",
         "geschlecht": "m",
         "kasse": "g",
@@ -669,7 +669,7 @@ export let listeMAP = {
             "Verhaltenstherapie"
         ],
         "adresse": "Gartenstraße 18, 72074 Tübingen",
-        "stadtteil": "Österberg", 
+        "stadtteil": "Gartenstraße", 
         "website": "",
         "geschlecht": "w",
         "kasse": "g",
@@ -852,7 +852,7 @@ export let listeMAP = {
             "Verhaltenstherapie"
         ],
         "adresse": "Gartenstraße 18, 72074 Tübingen",
-        "stadtteil": "Österberg", 
+        "stadtteil": "Gartenstraße", 
         "website": "",
         "geschlecht": "w",
         "kasse": "g",
@@ -982,7 +982,7 @@ export let listeMAP = {
             "Tiefenpsychologisches Verfahren", "Psychoanalyse"
         ],
         "adresse": "Gartenstraße 39, 72074 Tübingen",
-        "stadtteil": "Österberg", 
+        "stadtteil": "Gartenstraße", 
         "website": "",
         "geschlecht": "w",
         "kasse": "g",
@@ -1034,7 +1034,7 @@ export let listeMAP = {
             "Tiefenpsychologisches Verfahren", "Psychoanalyse"
         ],
         "adresse": "Hermann-Kurz-Straße 13, 72074 Tübingen",
-        "stadtteil": "Österberg", 
+        "stadtteil": "Gartenstraße", 
         "website": "",
         "geschlecht": "w",
         "kasse": "g",
@@ -1194,7 +1194,7 @@ export let listeMAP = {
             "Verhaltenstherapie"
         ],
         "adresse": "Gartenstraße 20, 72074 Tübingen",
-        "stadtteil": "Österberg", 
+        "stadtteil": "Gartenstraße", 
         "website": "https://www.psychotherapie-riessen.de/index.html",
         "geschlecht": "beides",
         "kasse": "g",
@@ -1264,8 +1264,470 @@ export let listeMAP = {
         "jugendtherapeutInINK": false,
         "weitereTherapeutInnen": [
         ]
-    },    
-    // Dr. Martin Jung / https://www.arztsuche-bw.de/index.php?suchen=1&offset=40&id_z_arzt_praxis=0&id_fachgruppe=483&id_zusatzbezeichnung=0&id_genehmigung=0&id_dmp=0&id_zusatzvertraege=0&id_sprache=0&vorname=&nachname=&arztgruppe=psychotherapeut&geschlecht=alle&wochentag=alle&zeiten=alle&fa_name=&plz=&ort=T%C3%BCbingen&strasse=&schluesselnr=&schluesseltyp=lanr7&landkreis=T%C3%BCbingen&id_leistungsort_art=0&id_praxis_zusatz=0&sorting=name&direction=ASC&checkbox_content=&name_schnellsuche=&fachgebiet_schnellsuche=
+    },   
+    "ingeborg_hartung": {
+        "therapeutenname": "Ingeborg Hartung",
+        "seite": "ingeborg_hartung",
+        "telefonnummer": "07071 1469095",
+        "erreichbarkeit": [
+            "Montag: 10-12 Uhr", "Donnerstag: 10-12 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Am Markt 13, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.046940803527834%2C48.51703075584688%2C9.06153202056885%2C48.524080164379676&amp;layer=mapnik&amp;marker=48.520555450103004%2C9.054239750000079",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "jung_und_kollegInnen": {
+        "therapeutenname": "Jung und Kolleg*innen",
+        "seite": "jung_und_kollegInnen",
+        "telefonnummer": "07071 34418",
+        "erreichbarkeit": [
+            "Donnerstag: 14:30-16:10 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Fürststraße 11, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "",
+        "geschlecht": "beides",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.029645919799806%2C48.500227605781035%2C9.088010787963869%2C48.52842870533195&amp;layer=mapnik&amp;marker=48.514313600024686%2C9.058805800000073",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+            "Amelie Brinkmann", "Vera Heuer-Jung", "Martin Jung"
+        ]
+    }, 
+    "kerstin_justen": {
+        "therapeutenname": "Kerstin Justen",
+        "seite": "kerstin_justen",
+        "telefonnummer": "0157 53375708",
+        "erreichbarkeit": [
+            "Dienstag-Freitag: 9-12 Uhr", "Dienstag, Donnerstag: 15-18 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Breuningstraße 15, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "http://www.psychotherapie-praxis-tuebingen.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Depressive Symptome", "Ängste", "Selbstwertprobleme", "Probleme im Beziehungsbereich", "Körperliche Beschwerden", "Arbeits- und Leistungsstörungen", "Anpassungs- und Belastungsstörungen", "Persönlichkeitsstörungen", "Essstörungen", "Psychotische Erkrankungen", "Autismusspektrumstörungen"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.024238586425783%2C48.49891951267332%2C9.082603454589846%2C48.527121340116764&amp;layer=mapnik&amp;marker=48.51304705003582%2C9.053421249999928",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "schoenenberg_und_jusyte": {
+        "therapeutenname": "Schönenberg und Jusyte",
+        "seite": "schoenenberg_und_jusyte",
+        "telefonnummer": "07071 8553125",
+        "erreichbarkeit": [
+            ab
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Eisenbahnstraße 61, 72072 Tübingen",
+        "stadtteil": "Unterer Wert", 
+        "website": "",
+        "geschlecht": "beides",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben", "Praxis bietet Videosprechstunden an"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.047842025756838%2C48.50182002139593%2C9.1062068939209%2C48.53002023482235&amp;layer=mapnik&amp;marker=48.51589950000671%2C9.077066299999956",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+            "Prof. Dr. rer. nat. Michael Schönenberg", "Dr. rer. nat. Aiste Jusyte"
+        ]
+    },
+    "simone_kambeitz": {
+        "therapeutenname": "Simone Kambeitz",
+        "seite": "simone_kambeitz",
+        "telefonnummer": "07071 26106",
+        "erreichbarkeit": [
+            "Montag: 8:30-9:30 Uhr", "Mittwoch: 13-14:10 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren"
+        ],
+        "adresse": "Neckargasse 1, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben", "Praxis bietet Videosprechstunden an"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.049386978149416%2C48.516760698510005%2C9.063978195190431%2C48.52381014462311&amp;layer=mapnik&amp;marker=48.52027890006239%2C9.056674799999996",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "wolfgang_kambeitz": {
+        "therapeutenname": "Wolfgang Kambeitz",
+        "seite": "wolfgang_kambeitz",
+        "telefonnummer": "07071 940776",
+        "erreichbarkeit": [
+            "Montag: 8:30-9:30 Uhr", "Mittwoch: 13-14:10 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren"
+        ],
+        "adresse": "Neckargasse 1, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben", "Praxis bietet Videosprechstunden an"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.049386978149416%2C48.516760698510005%2C9.063978195190431%2C48.52381014462311&amp;layer=mapnik&amp;marker=48.52027890006239%2C9.056674799999996",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "martina_buchmann": {
+        "therapeutenname": "Martina Buchmann",
+        "seite": "martina_buchmann",
+        "telefonnummer": "07071 6033711",
+        "erreichbarkeit": [
+            "Dienstag: 15:55-16:25 Uhr", "Mittwoch: 9:25-9:55 Uhr", "Mittwoch: 14:45-15:25 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Systemische Therapie"
+        ],
+        "adresse": "Dorfackerstraße 26, 72074 Tübingen",
+        "stadtteil": "Lustnau", 
+        "website": "https://www.nachhaltige-psychotherapie.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Schwerpunkt auf Gruppentherapie"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.050846099853517%2C48.51705918285124%2C9.10921096801758%2C48.54525091510785&amp;layer=mapnik&amp;marker=48.53112980002469%2C9.08003050000002",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "barbara_hinz": {
+        "therapeutenname": "Barbara Hinz und Kollegen",
+        "seite": "barbara_hinz",
+        "telefonnummer": "07071 551219",
+        "erreichbarkeit": [
+            ab
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Liststraße 7, 72074 Tübingen",
+        "stadtteil": "Schönblick/ Winkelwiese", 
+        "website": "",
+        "geschlecht": "beides",
+        "kasse": "g",
+        "jugendtherapeutIn": true,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.050159454345705%2C48.52444966276644%2C9.079341888427736%2C48.53854543392957&amp;layer=mapnik&amp;marker=48.531498038846586%2C9.064750671386719",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+            "Barbara Hinz", "Michael Steiner"
+        ]
+    },
+    "katharina_keifenheim": {
+        "therapeutenname": "Katharina Keifenheim",
+        "seite": "katharina_keifenheim",
+        "telefonnummer": "07071 8859968",
+        "erreichbarkeit": [
+            "Montag: 7:30-7:55 Uhr", "Montag: 12-12:50 Uhr", "Mittoch, Freitag: 13-13:50 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Verhaltenstherapie"
+        ],
+        "adresse": "Konzenbergstraße 4, 72074 Tübingen",
+        "stadtteil": "Lustnau", 
+        "website": "https://psychotherapie-keifenheim.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Depressionen", "Burnout, Erschöpfungszustände", "Essstörungen", "Somatoforme Störungen wie Reizdarmsyndrom", "Psychischen Problemen im Zusammenhang mit unerfüllten Kinderwunsch, Schwangerschaft, Geburt und Elternschaft, z.B. auch traumatisch erlebte Geburt, seelische Probleme im Anschluss an die Geburt etc.", "Traumafolgestörung, PTBS", "Angststörungen, Panikstörungen, generalisierte Angst"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.071187973022463%2C48.52155044917786%2C9.100370407104494%2C48.53564702729531&amp;layer=mapnik&amp;marker=48.528599228741314%2C9.085779190063477",
+        "avatar": "katharinaKeifenheim",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "renate_krist": {
+        "therapeutenname": "Renate Krist",
+        "seite": "renate_krist",
+        "telefonnummer": "07071 45388",
+        "erreichbarkeit": [
+            "Montag-Freitag: 9:50-10:15 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Elisabeth-Käsemann-Straße 6, 72074 Tübingen",
+        "stadtteil": "Lustnau", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.058485031127931%2C48.51234008167672%2C9.116849899291994%2C48.54053444050467&amp;layer=mapnik&amp;marker=48.52641655004587%2C9.087645350000003",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "mechtild_kessler": {
+        "therapeutenname": "Mechtild Kessler",
+        "seite": "mechtild_kessler",
+        "telefonnummer": "07071 8850021",
+        "erreichbarkeit": [
+            "Mo, Mi, Do: 14-14:30 Uhr", "Dienstag: 12-12:30 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Esslinger Straße 16, 72072 Tübingen",
+        "stadtteil": "Südstadt", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.040503501892092%2C48.505317472941066%2C9.069685935974123%2C48.519418568606945&amp;layer=mapnik&amp;marker=48.51237245003666%2C9.055088549999937",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "judith_kirsten": {
+        "therapeutenname": "Judith Kirsten",
+        "seite": "judith_kirsten",
+        "telefonnummer": "0162 3406360",
+        "erreichbarkeit": [
+            "Mittwoch: 13:10-14 Uhr", "Freitag: 13:10-14 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Nauklerstraße 60, 72074 Tübingen",
+        "stadtteil": "Schönblick/ Winkelwiese", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.035139083862306%2C48.516092655754704%2C9.093503952026369%2C48.54428492597939&amp;layer=mapnik&amp;marker=48.53019310010949%2C9.064353449999999",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "mareile_korte": {
+        "therapeutenname": "Mareile Korte-Schraivogel",
+        "seite": "mareile_korte",
+        "telefonnummer": "07071 25032",
+        "erreichbarkeit": [
+            "Montag-Donnerstag: 12:20-13:10 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Am Weilersbach 10, 72070 Tübingen",
+        "stadtteil": "Weststadt", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.010376930236818%2C48.52018605594866%2C9.03955936431885%2C48.53428301381282&amp;layer=mapnik&amp;marker=48.52724875006155%2C9.024978350000083",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "sibylle_kossmann": {
+        "therapeutenname": "Sibylle Koßmann-Böhm",
+        "seite": "sibylle_kossmann",
+        "telefonnummer": "0157 88158688",
+        "erreichbarkeit": [
+            "Freitag: 13:30-15:10 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Österbergstraße 7, 72074 Tübingen",
+        "stadtteil": "Österberg", 
+        "website": "https://www.kossmann-boehm.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Angststörungen", "Depressionen", "Bipolare Störung", "Anpassungsstörung", "Zwangsstörungen", "Essstörugen", "Somatoforme Störungen", "Psychiatrische Erkrankungen (z.B. Schizophrenie)", "ADHS/ADS", "Bei Kindern: Störung des Sozialverhaltens, Trennungsangst, Enkopresis und Enuresis"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.044194221496584%2C48.51356254163411%2C9.073376655578615%2C48.52766134288387&amp;layer=mapnik&amp;marker=48.520608650099014%2C9.058801499999959",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": true,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "clemens_krause": {
+        "therapeutenname": "Clemens Krause",
+        "seite": "clemens_krause",
+        "telefonnummer": "07071 2570174",
+        "erreichbarkeit": [
+            "Dienstag, Mittwoch: 12-13 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Gartenstraße 31, 72074 Tübingen",
+        "stadtteil": "Gartenstraße", 
+        "website": "https://www.tuebingen-psychotherapie.de/index.html",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Alle psychischen Störungsbilder"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.049386978149416%2C48.511885205326315%2C9.078569412231447%2C48.52598447336448&amp;layer=mapnik&amp;marker=48.51893450002469%2C9.063974799999983",
+        "avatar": "clemensKrause",
+        "therapeutenalter": Date.UTC(1965, 1, 1),
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "verena_lachmair": {
+        "therapeutenname": "Verena Lachmair",
+        "seite": "verena_lachmair",
+        "telefonnummer": "07071 9209189",
+        "erreichbarkeit": [
+            "Mittwoch: 18-18:50 Uhr", "Freitag: 8-8:50 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Madergasse 10, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.043979644775392%2C48.51830995525109%2C9.058570861816408%2C48.525359185772466&amp;layer=mapnik&amp;marker=48.52183469314155%2C9.051275253295898",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "ulrike_lange": {
+        "therapeutenname": "Ulrike Lange",
+        "seite": "ulrike_lange",
+        "telefonnummer": "07071 7771268",
+        "erreichbarkeit": [
+            "Montag: 12-13:10 Uhr", "Dienstag: 19-19:30 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren"
+        ],
+        "adresse": "Französische Allee 13, 72072 Tübingen",
+        "stadtteil": "Französisches Viertel", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.046640396118166%2C48.497782012967676%2C9.105005264282228%2C48.52598447336448&amp;layer=mapnik&amp;marker=48.51186780002465%2C9.075785799999949",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+                    
 }
 
 

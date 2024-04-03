@@ -425,6 +425,31 @@ formTest.addEventListener('submit', (e) => {
         gefilterteListeStadt = gefilterteListeStadt.concat(teil);
     }
 
+    if (werte.franz === true) {
+        let teil = gefilterteListeKasse.filter(obj => {
+            if (obj.stadtteil === 'Französisches Viertel') {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeStadt = gefilterteListeStadt.concat(teil);
+    }
+
+    if (werte.garten === true) {
+        let teil = gefilterteListeKasse.filter(obj => {
+            if (obj.stadtteil === 'Gartenstraße') {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        gefilterteListeStadt = gefilterteListeStadt.concat(teil);
+    }
+
+
     // console.log(gefilterteListeStadt);
 
     // Therapieformen:
@@ -619,6 +644,13 @@ formTest.addEventListener('submit', (e) => {
     console.log(gefiltertUndSortiert);
 
     let listeFILTERED = duplikatElem(gefiltertUndSortiert); // Über diese Variable wird die Tabelle iteriert
+
+    let ergebnisse = listeFILTERED.length;
+
+    console.log(ergebnisse);
+
+    const ergFeld = document.getElementById('erg');
+    ergFeld.innerText = ' (Ergebnisse: ' + ergebnisse + ')'
 
     //// Adressfeld
 

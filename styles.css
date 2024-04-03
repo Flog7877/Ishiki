@@ -677,3 +677,9 @@ body {
 .alleStadt:active, .alleForm:active {
   background-color: rgba(100, 148, 237, 0.89);
 }
+
+#erg {
+  font-size: 70%;
+  padding-left: 1em;
+  vertical-align: 20%;
+}
