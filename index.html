@@ -18,8 +18,7 @@
                 <strong>Suche:</strong>
                 <div>
                     <ul class="personenListe">
-                        <li><span id="LINKther"></span></li>
-                        <li><!--<h4><svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-search"><circle cx="10" cy="7" r="4"/><path d="M10.3 15H7a4 4 0 0 0-4 4v2"/><circle cx="17" cy="17" r="3"/><path d="m21 21-1.9-1.9"/></svg> <a href="psychotherapeutinnen.html?theme=dark">Psychotherapeut*innen</h4></a>--></li>
+                        <li><h4><svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-search"><circle cx="10" cy="7" r="4"/><path d="M10.3 15H7a4 4 0 0 0-4 4v2"/><circle cx="17" cy="17" r="3"/><path d="m21 21-1.9-1.9"/></svg> <a href="psychotherapeutinnen.html">Psychotherapeut*innen</h4></a></li>
                         <li><h4><svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-search"><circle cx="10" cy="7" r="4"/><path d="M10.3 15H7a4 4 0 0 0-4 4v2"/><circle cx="17" cy="17" r="3"/><path d="m21 21-1.9-1.9"/></svg> <a href="psychiaterinnen.html">Psychiater*innen</h4></a></li>
                     </ul>
                 </div>
@@ -86,13 +85,9 @@
 
     <script>
 
-        const querryString = window.location.search;
+        let cookieATM = document.cookie;
 
-        const urlParameter = new URLSearchParams(querryString);
-
-        const currentTheme = urlParameter.get('theme');
-
-        const currentURLstr = window.location.href;
+        console.log(cookieATM);
 
         let toggleDarkMode = document.getElementById('darkMode-toggle');
 
@@ -100,16 +95,10 @@
 
         let mode;
 
-        if (currentTheme === 'dark') {
+        if (cookieATM === 'theme=dark') {
             toggleDarkMode.checked = true;
             seite.classList.add('darkMode');
-            mode = 'dark';
-        } else {
-            mode = 'normal';
         }
-
-        let linkTher = document.getElementById('LINKther');
-        linkTher.innerHTML = `<h4><svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-search"><circle cx="10" cy="7" r="4"/><path d="M10.3 15H7a4 4 0 0 0-4 4v2"/><circle cx="17" cy="17" r="3"/><path d="m21 21-1.9-1.9"/></svg> <a href="psychotherapeutinnen.html?theme=${mode}">Psychotherapeut*innen</h4></a>`;
 
         function ausgabe() {
             
@@ -118,19 +107,18 @@
             seite.classList.toggle('darkMode');
 
             if (toggleDarkMode.checked === true) {
-                mode = 'dark';
+                document.cookie = "theme=dark; path=/";
             } else if (toggleDarkMode.checked === false) {
-                mode = 'normal';
+                document.cookie = "theme=normal; path=/";
             }
 
-            console.log(mode);
-
-            linkTher.innerHTML = `<h4><svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="0.9em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-search"><circle cx="10" cy="7" r="4"/><path d="M10.3 15H7a4 4 0 0 0-4 4v2"/><circle cx="17" cy="17" r="3"/><path d="m21 21-1.9-1.9"/></svg> <a href="psychotherapeutinnen.html?theme=${mode}">Psychotherapeut*innen</h4></a>`;
-
+            //console.log(mode);
+            //console.log(document.cookie);
         }
 
         let DarkModeStatus = toggleDarkMode.addEventListener('change', ausgabe);
 
     </script>
+    
 </body>
 </html>

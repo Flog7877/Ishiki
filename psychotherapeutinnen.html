@@ -139,22 +139,20 @@
 
     <script>
 
-        const querryString = window.location.search;
+        let cookieATM = document.cookie;
 
-        const urlParameter = new URLSearchParams(querryString);
-
-        const currentTheme = urlParameter.get('theme');
+        console.log(cookieATM);
 
         let toggleDarkMode = document.getElementById('darkMode-toggle');
 
         let seite = document.getElementById('koerper');
 
-        if (currentTheme === 'dark') {
-            toggleDarkMode.checked = true;
-            seite.classList.add('darkMode')
-        }
-
         let mode;
+
+        if (cookieATM === 'theme=dark') {
+            toggleDarkMode.checked = true;
+            seite.classList.add('darkMode');
+        }
 
         function ausgabe() {
             
@@ -163,13 +161,13 @@
             seite.classList.toggle('darkMode');
 
             if (toggleDarkMode.checked === true) {
-                mode = 'dark'
+                document.cookie = "theme=dark; path=/";
             } else if (toggleDarkMode.checked === false) {
-                mode = 'normal'
+                document.cookie = "theme=normal; path=/";
             }
 
-            console.log(mode);
-
+            //console.log(mode);
+            //console.log(document.cookie);
         }
 
         let DarkModeStatus = toggleDarkMode.addEventListener('change', ausgabe);
