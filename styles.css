@@ -683,3 +683,101 @@ body {
   padding-left: 1em;
   vertical-align: 20%;
 }
+
+.darkMode {
+  background-color: #282828;
+  color: white;
+  transition: background-color 500ms ease;
+}
+
+.darkMode a {
+  color: white;
+}
+
+.darkMode .notfall {
+  background-color: #e00f404e;
+}
+
+.darkMode .notfall-ueberschrift {
+  color: #E00F41;
+}
+
+
+.toggle-switch-darkMode label {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  width: 45px;
+  background-color: #e6e6e6;
+  cursor: pointer;
+  font-size: 0;
+  color: transparent;
+  border-radius: 22px;
+}
+
+.toggle-switch-darkMode label:after {
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 1px;
+  right: 22px;
+  border-radius: 50%;
+  background-color: #e8e8e8;
+  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+.toggle-switch-darkMode input:checked + label {
+  background-color: #6c4d91;
+}
+
+.toggle-switch-darkMode input:checked + label:after {
+  right: 1px;
+  background-color: #fff;
+  box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-switch-darkMode input {
+  position: absolute !important;
+  width: 0.5px;
+  height: 0.5px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  bottom: 0;
+}
+
+.toggle-switch-darkMode label {
+  transition: 500ms ease;
+}
+
+.toggle-switch-darkMode label:after {
+  transition: right 500ms ease, background-color 500ms ease, box-shadow 500ms ease;
+}
+
+.toggleLabelDarkmode {
+  vertical-align: bottom;
+}
+
+.darkmode {
+  margin: 1em;
+  padding: 0.2em;
+  margin-bottom: 0;
+  margin-top: 5px;
+  float: left;
+}
+
+
+.darkmode {
+  margin: auto;
+  padding: 0.2em;
+  margin-bottom: 0;
+  margin-top: -15px;
+  float: left;
+}
+
+.darkmode:hover {
+  border: none;
+  border-radius: 0;
+}

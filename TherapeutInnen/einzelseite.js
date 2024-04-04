@@ -177,7 +177,7 @@ spezifikationenHTML.innerHTML = listeGenerieren(datensatz);
 
 
 let avatarTher = document.getElementById('avaterDesT');
-// avatarTher.innerHTML = `<img src="Bilder/${datensatz.avatar}.png" class="profilbild" id="profilbild">`; // SO WAR ES EIGENTLICH
+//avatarTher.innerHTML = `<img src="Bilder/${datensatz.avatar}.png" class="profilbild" id="profilbild">`; // SO WAR ES EIGENTLICH
 avatarTher.innerHTML = `<img src="Bilder/defaultIcon.png" class="profilbild" id="profilbild">`;
 
 // Gemeinschaftspraxen
