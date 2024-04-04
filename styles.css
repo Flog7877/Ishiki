@@ -687,7 +687,7 @@ body {
 .darkMode {
   background-color: #282828;
   color: white;
-  transition: background-color 500ms ease;
+  transition: background-color 100ms ease;
 }
 
 .darkMode a {
