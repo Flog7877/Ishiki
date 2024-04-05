@@ -864,3 +864,17 @@ body {
 .darkMode input::placeholder {
   color: white;
 }
+
+
+.darkMode .Fertig {
+  background-color: #3c3c3c;
+}
+
+.darkMode .Fertig:hover {
+  background-color: #03dac5b7;
+
+}
+
+.darkMode .Fertig:active {
+  background-color: #03DAC6;
+}
