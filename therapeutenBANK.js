@@ -73,8 +73,10 @@ export let listeMAP = {
         ],
         "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.041919708251955%2C48.51086171860725%2C9.071102142333986%2C48.52496127146709&amp;layer=mapnik&amp;marker=48.517905500065886%2C9.056521100000055",
         "avatar": "meksMattes",
-        "therapeutenalter": Date.UTC(1957, 1, 1)
-        // Spezifikationen: https://www.therapie.de/profil/mattes/
+        "therapeutenalter": Date.UTC(1957, 1, 1),
+        "weitereTherapeutInnen": [
+            "Meks Mattes", "Regina Mattes", "Andrea Mayer"
+        ]
     },
     "anne_koop":{
         "therapeutenname": "Anne Koop",
@@ -1727,10 +1729,143 @@ export let listeMAP = {
         "weitereTherapeutInnen": [
         ]
     },
-    // Bei Arztsuche: Christiane Kiviet; https://www.arztsuche-bw.de/index.php?suchen=1&offset=60&id_z_arzt_praxis=0&id_fachgruppe=483&id_zusatzbezeichnung=0&id_genehmigung=0&id_dmp=0&id_zusatzvertraege=0&id_sprache=0&vorname=&nachname=&arztgruppe=psychotherapeut&geschlecht=alle&wochentag=alle&zeiten=alle&fa_name=&plz=&ort=T%C3%BCbingen&strasse=&schluesselnr=&schluesseltyp=lanr7&landkreis=T%C3%BCbingen&id_leistungsort_art=0&id_praxis_zusatz=0&sorting=name&direction=ASC&checkbox_content=&name_schnellsuche=&fachgebiet_schnellsuche=
-    //
-}
-
+    "julia_link": {
+        "therapeutenname": "Julia Link",
+        "seite": "julia_link",
+        "telefonnummer": " 07071 9985767",
+        "erreichbarkeit": [
+            "Montag: 11:30-12:15 Uhr", "Dienstag, Donnerstag: 17:50-18:20 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Rappstraße 46, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.032521247863771%2C48.51623479324889%2C9.061703681945803%2C48.53033285080883&amp;layer=mapnik&amp;marker=48.523273600024694%2C9.047130599999946",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": true,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "gaby_lippold": {
+        "therapeutenname": "Gaby Lippold",
+        "seite": "gaby_lippold",
+        "telefonnummer": "07071 9698684",
+        "erreichbarkeit": [
+            "Montag-Dienstag: 12:20-12:45 Uhr", "Mittwoch-Donnerstag: 8:35-9 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren"
+        ],
+        "adresse": "Doblerstraße 8, 72074 Tübingen",
+        "stadtteil": "Österberg", 
+        "website": "https://www.psychologin-therapeutin.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Essstörungen", "Traumafolgestörung", "Chronische Schmerzen", "Prüfungsängste"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.044322967529299%2C48.514443831679245%2C9.07350540161133%2C48.52854238766867&amp;layer=mapnik&amp;marker=48.52149360019373%2C9.058914184570312",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "marcel_lisson": {
+        "therapeutenname": "Marcel Lisson",
+        "seite": "marcel_lisson",
+        "telefonnummer": "07071 368404",
+        "erreichbarkeit": [
+            "Donnerstag: 8:40-12 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Verhaltenstherapie"
+        ],
+        "adresse": "Uhlandstraße 14, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "http://www.m-lisson.de/html/index.php",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Bisher Verdrängtes / Unbewusstes bewusst zu machen und zu verstehen", "Abgespaltene Teile des Erlebens reintegrieren", '"Schlechte" Gewohnheiten hinterfragen und als "alte" Problemlösungen erkennen', "Ressourcen wieder finden und neue gewinnen", "Im Rollentausch sich in problematische Beziehungen einfühlen", "Lösungen für Teilprobleme suchen und ausprobieren"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.048571586608888%2C48.514443831679245%2C9.063162803649904%2C48.52149360019373&amp;layer=mapnik&amp;marker=48.517968838568294%2C9.055867195129395",
+        "avatar": "defaultIcon",
+        "therapeutenalter": Date.UTC(1958, 1, 1),
+        "jugendtherapeutInINK": true,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "leopold_morbitzer": {
+        "therapeutenname": "Leopold Morbitzer",
+        "seite": "leopold_morbitzer",
+        "telefonnummer": "07071 6875820",
+        "erreichbarkeit": [
+            "Montag-Donnerstag: 7-7:25 Uhr", "Montag-Donnerstag: 15-15:25 Uhr"
+        ],
+        "therapieformen": [
+            "Tiefenpsychologisches Verfahren", "Psychoanalyse"
+        ],
+        "adresse": "Holzmarkt 7, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "https://www.leopold-morbitzer.de/",
+        "geschlecht": "m",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.052444696426393%2C48.51871502832861%2C9.059740304946901%2C48.522239738033775&amp;layer=mapnik&amp;marker=48.520477413838826%2C9.056092500686646",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    "beate_nentwich": {
+        "therapeutenname": "Beate Nentwich",
+        "seite": "beate_nentwich",
+        "telefonnummer": "07071 7939414",
+        "erreichbarkeit": [
+            "Montag-Donnerstag: 7:45-8:30 Uhr"
+        ],
+        "therapieformen": [
+            "Verhaltenstherapie"
+        ],
+        "adresse": "Madergasse 10, 72070 Tübingen",
+        "stadtteil": "Zentrum", 
+        "website": "https://www.praxis-nentwich.de/",
+        "geschlecht": "w",
+        "kasse": "g",
+        "jugendtherapeutIn": false,
+        "kostenerstattungsverfahren": false,
+        "spezifikationen": [
+            "Keine Angaben"
+        ],
+        "karte": "https://www.openstreetmap.org/export/embed.html?bbox=9.043979644775392%2C48.51830995525109%2C9.058570861816408%2C48.525359185772466&amp;layer=mapnik&amp;marker=48.52183469314155%2C9.051275253295898",
+        "avatar": "defaultIcon",
+        "therapeutenalter": nA,
+        "jugendtherapeutInINK": false,
+        "weitereTherapeutInnen": [
+        ]
+    },
+    // (oben) https://www.arztsuche-bw.de/index.php?suchen=1&offset=80&id_z_arzt_praxis=0&id_fachgruppe=483&id_zusatzbezeichnung=0&id_genehmigung=0&id_dmp=0&id_zusatzvertraege=0&id_sprache=0&vorname=&nachname=&arztgruppe=psychotherapeut&geschlecht=alle&wochentag=alle&zeiten=alle&fa_name=&plz=&ort=T%C3%BCbingen&strasse=&schluesselnr=&schluesseltyp=lanr7&landkreis=T%C3%BCbingen&id_leistungsort_art=0&id_praxis_zusatz=0&sorting=name&direction=ASC&checkbox_content=&name_schnellsuche=&fachgebiet_schnellsuche=
+};
 
 export const listePsychiater = [
     {
