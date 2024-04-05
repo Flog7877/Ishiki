@@ -740,7 +740,7 @@ body {
 }
 
 .toggle-switch-darkMode input:checked + label {
-  background-color: #6c4d91;
+  background-color: #4e4e4e;
 }
 
 .toggle-switch-darkMode input:checked + label:after {
