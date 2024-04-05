@@ -75,7 +75,7 @@ export let listeMAP = {
         "avatar": "meksMattes",
         "therapeutenalter": Date.UTC(1957, 1, 1),
         "weitereTherapeutInnen": [
-            "Meks Mattes", "Regina Mattes", "Andrea Mayer"
+            "Meks Mattes", "Andrea Mayer"
         ]
     },
     "anne_koop":{
