@@ -214,7 +214,7 @@ formTest.addEventListener('submit', (e) => {
         }
     })
 
-    console.log(werte);
+    //console.log(werte);
 
     // Funktion für unten:
 
@@ -648,13 +648,13 @@ formTest.addEventListener('submit', (e) => {
         gefiltertUndSortiert.reverse();
     }
 
-    console.log(gefiltertUndSortiert);
+    //console.log(gefiltertUndSortiert);
 
     let listeFILTERED = duplikatElem(gefiltertUndSortiert); // Über diese Variable wird die Tabelle iteriert
 
     let ergebnisse = listeFILTERED.length;
 
-    console.log(ergebnisse);
+    //console.log(ergebnisse);
 
     const ergFeld = document.getElementById('erg');
     ergFeld.innerText = ' (Ergebnisse: ' + ergebnisse + ')';

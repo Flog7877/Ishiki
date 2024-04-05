@@ -166,7 +166,7 @@ formTest.addEventListener('submit', (e) => {
         }
     })
 
-    console.log(werte)
+    //console.log(werte)
 
     // Filterprozess
 
@@ -421,11 +421,11 @@ formTest.addEventListener('submit', (e) => {
 
     let listeFERTIG = gefiltertUndSortiertPsychiater;
 
-    console.log(listeFERTIG);
+    //console.log(listeFERTIG);
 
     let ergebnisse = listeFERTIG.length;
 
-    console.log(ergebnisse);
+    //console.log(ergebnisse);
 
     const ergFeld = document.getElementById('erg');
     ergFeld.innerText = ' (Ergebnisse: ' + ergebnisse + ')';
