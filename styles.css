@@ -694,12 +694,22 @@ body {
   color: white;
 }
 
+/*
 .darkMode .notfall {
   background-color: #e00f404e;
 }
 
 .darkMode .notfall-ueberschrift {
   color: #E00F41;
+}
+*/
+
+.darkMode .notfall {
+  background-color: #d4586f28;
+}
+
+.darkMode .notfall-ueberschrift {
+  color: #d4586e;
 }
 
 
@@ -780,4 +790,54 @@ body {
 .darkmode:hover {
   border: none;
   border-radius: 0;
+}
+
+
+.darkMode .dropdown-check-list ul.items {
+  background-color: #494949;
+}
+
+
+.darkMode .dropdown-check-list {
+  background-color: #494949;
+}
+
+.darkMode table a {
+  color: #5183d3;
+}
+
+.darkMode .titleCard {
+  color: #BB86FC;
+}
+
+.darkMode .info {
+  background-color: transparent;
+}
+
+.darkMode .card {
+  background-color: #bb86fc50;
+}
+
+.darkMode .outer {
+  border-left: 2px solid #BB86FC;
+}
+
+/* Card container */
+.darkMode .card {
+  background: #bb86fc50;
+
+}
+
+
+/* Timeline dot  */
+.darkMode .titleCard::before {
+  border: 3px solid #BB86FC;
+}
+
+.darkMode .infoblock {
+  background-color: #bb86fc36;
+}
+
+.darkMode .infoblock-title {
+  color: #BB86FC;
 }
