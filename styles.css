@@ -841,3 +841,17 @@ body {
 .darkMode .infoblock-title {
   color: #BB86FC;
 }
+
+
+.darkMode .alleStadt, .alleForm {
+  background-color: #5183d3a9;
+  color: white;
+}
+
+.darkMode .alleStadt:hover, .alleForm:hover {
+  background-color: #5183d3c0;
+}
+
+.darkMode .alleStadt:active, .alleForm:active {
+  background-color: #5183d3;
+}
