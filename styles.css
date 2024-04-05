@@ -794,12 +794,12 @@ body {
 
 
 .darkMode .dropdown-check-list ul.items {
-  background-color: #494949;
+  background-color: #3c3c3c;
 }
 
 
 .darkMode .dropdown-check-list {
-  background-color: #494949;
+  background-color: #3c3c3c;
 }
 
 .darkMode table a {
@@ -854,4 +854,13 @@ body {
 
 .darkMode .alleStadt:active, .alleForm:active {
   background-color: #5183d3;
+}
+
+.darkMode input {
+  background-color: #3c3c3c;
+  
+}
+
+.darkMode input::placeholder {
+  color: white;
 }
