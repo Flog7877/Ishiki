@@ -67,7 +67,7 @@ function istTherapieform(arr, therapieform) {
 }
 
 function linkName(seite, therapeutenName) {
-    return `<a href="TherapeutInnen/therapeutIn.html?name=${seite}" target="_blank">${therapeutenName}</a>`;
+    return `<strong><a href="TherapeutInnen/therapeutIn.html?name=${seite}" target="_blank">${therapeutenName}</a></strong>`;
 }
 
 function nameInfo() {
@@ -657,7 +657,7 @@ formTest.addEventListener('submit', (e) => {
     console.log(ergebnisse);
 
     const ergFeld = document.getElementById('erg');
-    ergFeld.innerText = ' (Ergebnisse: ' + ergebnisse + ')'
+    ergFeld.innerText = ' (Ergebnisse: ' + ergebnisse + ')';
 
     //// Adressfeld
 

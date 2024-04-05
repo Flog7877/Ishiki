@@ -62,7 +62,7 @@ function iframeGenerator(linkKarte) {
 }
 
 function psychKasse(namePsych, kassePsych) {
-    let ausgabe = namePsych;
+    let ausgabe = '<strong>' + namePsych + '</strong>';
 
     if (kassePsych === 'p') {
         ausgabe += '<br>(Privatpraxis)';
@@ -342,6 +342,18 @@ formTest.addEventListener('submit', (e) => {
         psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teilSued);
     }
 
+    if (werte.uni === true) {
+        let teilSued = psychiaterListeFilterKasse.filter(obj => {
+            if (obj.praxisStadtteil === 'Universität') {
+                return true;
+            } else {
+                return false; 
+            }
+        })
+
+        psychiaterListeFilterStadtteile = psychiaterListeFilterStadtteile.concat(teilSued);
+    }
+
     //  --- Ende des Filterprozesses ---
 
     // Sortierungs-Parameter:
@@ -410,6 +422,13 @@ formTest.addEventListener('submit', (e) => {
     let listeFERTIG = gefiltertUndSortiertPsychiater;
 
     console.log(listeFERTIG);
+
+    let ergebnisse = listeFERTIG.length;
+
+    console.log(ergebnisse);
+
+    const ergFeld = document.getElementById('erg');
+    ergFeld.innerText = ' (Ergebnisse: ' + ergebnisse + ')';
 
     // Adresse:
 
