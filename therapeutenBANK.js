@@ -1940,6 +1940,7 @@ export const listePsychiater = [
         ],
         "website": ""
     },
+    /*
     {
         "praxis": "Dr. Char",
         "psychiaterNamen": [
@@ -1958,6 +1959,7 @@ export const listePsychiater = [
         ],
         "website": ""
     },
+    */
     {
         "praxis": "Dr. Wettach",
         "psychiaterNamen": [
@@ -1968,7 +1970,7 @@ export const listePsychiater = [
         "karteIFRAME": "https://www.openstreetmap.org/export/embed.html?bbox=9.036469459533693%2C48.504720364152135%2C9.065651893615724%2C48.518821625968535&amp;layer=mapnik&amp;marker=48.51177148560064%2C9.051060676574707",
         "psychiaterNummer": "07071 1473073",
         "telefonischeErreichbarkeit": [
-            "Di: 9-13 Uhr", "Mi: 9-12 und 15-18 Uhr", "Do: 8-11 Uhr"
+            "Mo, Di, Do 13:30-13:55 Uhr", "Mi: 14:30-14:55 Uhr"
         ],
         "kasse": "g",
         "geschlechtlId": [
