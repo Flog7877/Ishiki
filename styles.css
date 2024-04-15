@@ -474,14 +474,14 @@ body {
 .infoblock {
   display: block;
   border: transparent;
-  background-color: #2a51ff3f;
+  background-color: rgba(137, 64, 255, 0.199);
   border-radius: 5px;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
 .infoblock-title {
-  color: rgb(98, 0, 255);
+  color: rgb(137, 64, 255);
 }
 
 .infoblock-inhalt {
@@ -594,12 +594,12 @@ body {
 }
 
 @media (max-width: 420px) {
-  .infoblock {
-    width: 500px;
+  .koerper {
+    width: 90%;
+
   }
 
-  .datenHinzu {
-    width: 345px;
+  .infoblock {
     margin-right: 5%;
   }
 }
