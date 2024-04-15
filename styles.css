@@ -878,3 +878,11 @@ body {
 .darkMode .Fertig:active {
   background-color: #03DAC6;
 }
+
+#hinweis {
+  text-decoration: none;
+}
+
+.darkMode #hinweis {
+  color: cornflowerblue;
+}
