@@ -892,6 +892,6 @@ body {
 }
 
 .darkMode .footnoteElement:hover {
-  border: solid white 1px;
+  border: white 1px;
   border-radius: 4px;
 }
