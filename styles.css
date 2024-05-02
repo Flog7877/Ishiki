@@ -886,3 +886,7 @@ body {
 .darkMode #hinweis {
   color: cornflowerblue;
 }
+
+.darkMode .adressfeldTEXT {
+  color: white;
+}
