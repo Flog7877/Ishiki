@@ -2051,42 +2051,6 @@ export const listePsychiater = [
         "website": ""
     },
     {
-        "praxis": "Prof. Dr. Larbig",
-        "psychiaterNamen": [
-            "Wolfgang Larbig"
-        ],
-        "psychiaterAdresse": "Ursrainer Ring 29, Tübingen",
-        "praxisStadtteil": "Wanne",
-        "karteIFRAME": "https://www.openstreetmap.org/export/embed.html?bbox=8.98784637451172%2C48.509098998574636%2C9.104576110839846%2C48.56547562831295&amp;layer=mapnik&amp;marker=48.537275100030094%2C9.04627544999994",
-        "psychiaterNummer": "07071 62117",
-        "telefonischeErreichbarkeit": [
-            ab
-        ],
-        "kasse": "p",
-        "geschlechtlId": [
-            "m"
-        ],
-        "website": ""
-    },
-    {
-        "praxis": "Prof. Dr. Plassmann",
-        "psychiaterNamen": [
-            "Reinhard Plassmann"
-        ],
-        "psychiaterAdresse": "Gartenstraße 18, 72074 Tübingen",
-        "praxisStadtteil": "Gartenstraße",
-        "karteIFRAME": "https://www.openstreetmap.org/export/embed.html?bbox=9.046468734741213%2C48.511799915556%2C9.075651168823244%2C48.52589920732924&amp;layer=mapnik&amp;marker=48.51885770007148%2C9.061039199999982",
-        "psychiaterNummer": "07071 7787795",
-        "telefonischeErreichbarkeit": [
-            ab
-        ],
-        "kasse": "p",
-        "geschlechtlId": [
-            "m"
-        ],
-        "website": "https://www.praxisplassmann.de/"
-    },
-    {
         "praxis": "Uniklinik f. Psychiatrie und Psychotherapie",
         "psychiaterNamen": [
             ""
