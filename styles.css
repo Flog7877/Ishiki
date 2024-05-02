@@ -890,3 +890,8 @@ body {
 .darkMode .adressfeldTEXT {
   color: white;
 }
+
+.darkMode .footnoteElement:hover {
+  border: solid white 1px;
+  border-radius: 4px;
+}
