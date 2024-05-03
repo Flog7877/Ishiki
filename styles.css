@@ -374,8 +374,7 @@ output, .alter {
 }
 
 .footnoteElement:hover {
-  border: solid black 1px;
-  border-radius: 4px;
+  border: none;
 }
 
 body {
