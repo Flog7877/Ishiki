@@ -881,6 +881,7 @@ body {
 
 #hinweis {
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .darkMode #hinweis {
